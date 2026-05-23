@@ -1,0 +1,2876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PVL1501 — Law of Persons: Study Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1410;
+    --ink-soft: #3d332c;
+    --paper: #faf6f0;
+    --paper-warm: #f2ebe0;
+    --accent: #8b2e1f;
+    --accent-soft: #d4a89c;
+    --gold: #b8860b;
+    --rule: #d8ccbb;
+    --highlight: #fff4d6;
+    --box-bg: #f5ede0;
+     --alert:     #7b1e1e;
+    --case-bg: #eef1f5;
+    --case-accent: #2c4358;
+    --activity-bg: #f0ede7;
+    --activity-accent: #5a4a3a;
+    
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.65;
+    font-size: 16px;
+    padding: 0 20px 60px;
+  }
+  .container { max-width: 820px; margin: 0 auto; }
+
+  /* Cover */
+  header.cover {
+    padding: 50px 0 40px;
+    border-bottom: 3px double var(--ink);
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .cover .kicker {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .cover h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 800;
+    font-size: clamp(2rem, 7vw, 3.2rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+  }
+  .cover h1 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+  .cover .subtitle {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .cover .meta {
+    margin-top: 24px;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    font-variant: small-caps;
+    letter-spacing: 0.1em;
+  }
+
+  /* Table of contents */
+  .toc {
+    background: var(--box-bg);
+    border: 1px solid var(--rule);
+    padding: 24px 28px;
+    margin-bottom: 40px;
+    border-radius: 2px;
+  }
+  .toc h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.3rem;
+    margin-bottom: 14px;
+    letter-spacing: -0.01em;
+  }
+  .toc ol { list-style: none; counter-reset: unit 1; }
+  .toc ol li {
+    counter-increment: unit;
+    padding: 7px 0;
+    border-bottom: 1px dotted var(--rule);
+    display: flex;
+    gap: 14px;
+    align-items: baseline;
+  }
+  .toc ol li:last-child { border-bottom: none; }
+  .toc ol li::before {
+    content: "Unit " counter(unit, decimal-leading-zero);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    font-weight: 600;
+    min-width: 70px;
+  }
+  .toc ol li a {
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 500;
+    flex: 1;
+  }
+  .toc ol li a:hover { color: var(--accent); text-decoration: underline; }
+
+  /* Unit sections */
+  section.unit {
+    margin: 60px 0 40px;
+    padding-top: 20px;
+  }
+  section.unit .unit-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  section.unit h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 800;
+    font-size: clamp(1.6rem, 4vw, 2.1rem);
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--ink);
+  }
+  section.unit h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 28px 0 12px;
+    color: var(--accent);
+  }
+  section.unit h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 20px 0 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--ink-soft);
+  }
+  section.unit p { margin-bottom: 14px; }
+  section.unit ul, section.unit ol { margin: 10px 0 14px 22px; }
+  section.unit li { margin-bottom: 6px; }
+  strong { color: var(--ink); font-weight: 600; }
+  em { font-family: 'Fraunces', serif; font-style: italic; }
+
+  /* Plain English box */
+  .plain {
+    background: var(--highlight);
+    border-left: 4px solid var(--gold);
+    padding: 14px 18px;
+    margin: 18px 0;
+    border-radius: 0 3px 3px 0;
+  }
+  .plain .tag {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* Example box */
+  .example {
+    background: var(--paper-warm);
+    border: 1px solid var(--rule);
+    padding: 16px 20px;
+    margin: 18px 0;
+    border-radius: 2px;
+    position: relative;
+  }
+  .example::before {
+    content: "EXAMPLE";
+    position: absolute;
+    top: -9px;
+    left: 16px;
+    background: var(--paper);
+    padding: 0 10px;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* ACTIVITY BOX */
+  .activity {
+    background: var(--activity-bg);
+    border: 2px solid var(--activity-accent);
+    padding: 18px 22px;
+    margin: 22px 0;
+    border-radius: 3px;
+    position: relative;
+  }
+  .activity::before {
+    content: "✎ ACTIVITY";
+    position: absolute;
+    top: -11px;
+    left: 16px;
+    background: var(--paper);
+    padding: 0 10px;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--activity-accent);
+    font-weight: 700;
+  }
+  .activity-title {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--activity-accent);
+    font-size: 0.95rem;
+  }
+  .feedback {
+    background: var(--paper);
+    border-left: 3px solid var(--accent);
+    padding: 12px 16px;
+    margin-top: 14px;
+    border-radius: 0 3px 3px 0;
+  }
+  .feedback .tag {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 4px;
+  }
+   /* ── CONCEPT BOX ── */
+  .concept-box {
+    background: #eaf4ea;
+    border-left: 4px solid var(--accent2);
+    border-radius: 0 6px 6px 0;
+    padding: 1rem 1.2rem;
+    margin: 1.2rem 0;
+  }
+  .concept-box .banner {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--accent2);
+    margin-bottom: 0.4rem;
+  }
+  /* CASE BOX */
+  .case {
+    background: var(--case-bg);
+    border: 1px solid var(--case-accent);
+    border-left: 5px solid var(--case-accent);
+    padding: 18px 22px;
+    margin: 22px 0;
+    border-radius: 3px;
+    position: relative;
+  }
+  .case::before {
+    content: "§ CASE";
+    position: absolute;
+    top: -11px;
+    left: 16px;
+    background: var(--paper);
+    padding: 0 10px;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--case-accent);
+    font-weight: 700;
+  }
+  .case h5 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--case-accent);
+    margin-bottom: 4px;
+  }
+
+  .case-box .banner {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--case-accent);
+    margin-bottom: 0.4rem;
+  }
+
+  .case .citation {
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    font-style: italic;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .case .case-row {
+    margin-bottom: 8px;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 10px;
+  }
+  .case .case-row strong {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--case-accent);
+    padding-top: 2px;
+  }
+  .case-pin {
+    background: var(--case-accent);
+    color: var(--paper);
+    padding: 6px 10px;
+    margin-top: 10px;
+    font-size: 0.85rem;
+    border-radius: 2px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+  }
+  .case-pin strong { color: var(--paper); font-style: normal; }
+
+  /* Key concept card */
+  .keybox {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 18px 22px;
+    margin: 22px 0;
+    border-radius: 3px;
+  }
+  .keybox h4 {
+    color: var(--accent-soft);
+    margin-top: 0;
+  }
+  .keybox strong { color: var(--paper); }
+
+  /* Diagram base */
+  .diagram {
+    background: white;
+    border: 1px solid var(--rule);
+    padding: 20px;
+    margin: 22px 0;
+    border-radius: 3px;
+    text-align: center;
+    overflow-x: auto;
+  }
+  .diagram .caption {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    margin-top: 12px;
+  }
+
+  /* ── DEEP DIVE ── */
+  .deep-dive {
+    background: #fffde7;
+    border: 2px solid var(--gold);
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    margin: 1.4rem 0;
+  }
+  .deep-dive .banner {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    margin-bottom: 0.4rem;
+  }
+ 
+  /* ── EXAM ALERT ── */
+  .exam-alert {
+    background: #fdf0f0;
+    border: 2px solid var(--alert);
+    border-radius: 8px;
+    padding: 0.9rem 1.1rem;
+    margin: 1.2rem 0;
+    font-size: 0.92rem;
+  }
+  .exam-alert .banner {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--alert);
+    margin-bottom: 0.3rem;
+  }
+
+  /* Flowchart boxes */
+  .flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.88rem;
+  }
+  .flow-node {
+    background: var(--paper-warm);
+    border: 2px solid var(--ink);
+    padding: 10px 18px;
+    border-radius: 3px;
+    min-width: 180px;
+    max-width: 340px;
+    font-weight: 500;
+  }
+  .flow-node.accent { background: var(--accent); color: var(--paper); border-color: var(--accent); }
+  .flow-node.soft { background: var(--highlight); border-color: var(--gold); }
+  .flow-arrow { font-size: 1.4rem; color: var(--accent); }
+  .flow-split {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .flow-branch {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+    margin-top: 0.4rem;
+  }
+  .flow-yes { background: var(--accent); color: #000; border-radius: 6px; padding: 0.5rem 0.8rem; font-size: 0.85rem; }
+  .flow-no  { background: var(--alert); color: #000; border-radius: 6px; padding: 0.5rem 0.8rem; font-size: 0.85rem; }
+  .flow-label { font-size: 0.78rem; font-weight: 700; margin-bottom: 0.2rem; letter-spacing: 0.05em; }
+
+   /* ── FLOW / COMPARISON TABLE ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+  }
+  th {
+    background: var(--accent);
+    color: #fff;
+    padding: 0.55rem 0.8rem;
+    text-align: left;
+    font-weight: 600;
+  }
+  td {
+    padding: 0.5rem 0.8rem;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: var(--paper-warm); }
+ /* ── ENRICHMENT CALCULATOR ── */
+  .calc-box {
+    background: #f4f0ff;
+    border: 2px solid #5a3fa0;
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    margin: 1.2rem 0;
+  }
+  .calc-box .banner { color: #5a3fa0; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+  .calc-rule {
+    background: #fff;
+    border-left: 3px solid #5a3fa0;
+    padding: 0.4rem 0.8rem;
+    margin: 0.5rem 0;
+    font-size: 0.92rem;
+  }
+  /* Venn/branching diagrams */
+  .branch {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+  .branch-parent {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 12px 18px;
+    font-weight: 600;
+    border-radius: 3px;
+    text-align: center;
+  }
+  .branch-children {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 10px;
+  }
+  .branch-child {
+    background: var(--paper-warm);
+    border: 1px solid var(--rule);
+    padding: 10px 14px;
+    border-radius: 3px;
+  }
+  .branch-child strong { display: block; color: var(--accent); font-size: 0.85rem; margin-bottom: 4px; }
+
+  /* Comparison table */
+  table.compare {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 0.9rem;
+  }
+  table.compare th, table.compare td {
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  table.compare th {
+    background: var(--ink);
+    color: var(--paper);
+    font-weight: 600;
+  }
+  table.compare tr:nth-child(even) td { background: var(--paper-warm); }
+  table.compare td:first-child { font-weight: 600; color: var(--accent); }
+
+  /* Timeline (age spectrum) */
+  .age-line {
+    position: relative;
+    margin: 30px 0 40px;
+    padding: 0 10px;
+  }
+  .age-track {
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--gold) 50%, var(--ink) 100%);
+    border-radius: 2px;
+    margin: 36px 0 20px;
+    position: relative;
+  }
+  .age-marker {
+    position: absolute;
+    top: -6px;
+    width: 16px;
+    height: 16px;
+    background: var(--paper);
+    border: 3px solid var(--ink);
+    border-radius: 50%;
+    transform: translateX(-50%);
+  }
+  .age-label {
+    position: absolute;
+    font-size: 0.78rem;
+    font-weight: 600;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+  .age-above { top: -42px; color: var(--ink); }
+  .age-below { top: 16px; color: var(--accent); font-style: italic; }
+
+  /* Mnemonic */
+  .mnemonic {
+    background: var(--accent);
+    color: var(--paper);
+    padding: 14px 20px;
+    margin: 20px 0;
+    border-radius: 3px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    text-align: center;
+  }
+  .mnemonic .tag {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    opacity: 0.8;
+    margin-bottom: 6px;
+  }
+ 
+  /* Key terms */
+  .terms {
+    margin: 16px 0;
+    padding: 0;
+  }
+  .terms dt {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--accent);
+    margin-top: 10px;
+  }
+  .terms dd { margin-left: 0; color: var(--ink-soft); font-size: 0.95rem; }
+
+  /* Navigation / back to top */
+  .back-top {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: var(--accent);
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .back-top:hover { text-decoration: underline; }
+
+  /* Footer */
+  footer {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+  }
+
+  /* Drop cap */
+  .intro-para::first-letter {
+    font-family: 'Fraunces', serif;
+    font-weight: 800;
+    font-size: 3.2rem;
+    float: left;
+    line-height: 0.9;
+    margin: 4px 8px -4px 0;
+    color: var(--accent);
+  }
+
+  /* Case directory */
+  .case-directory {
+    background: var(--case-bg);
+    border: 1px solid var(--case-accent);
+    padding: 20px 24px;
+    margin: 30px 0;
+    border-radius: 3px;
+  }
+  .case-directory h3 {
+    color: var(--case-accent);
+    font-family: 'Fraunces', serif;
+    margin-bottom: 12px;
+  }
+  .case-directory ol {
+    columns: 1;
+    font-size: 0.88rem;
+  }
+  @media (min-width: 640px) {
+    .case-directory ol { columns: 2; column-gap: 24px; }
+  }
+  .case-directory li { break-inside: avoid; margin-bottom: 6px; }
+  .case-directory a { color: var(--case-accent); text-decoration: none; }
+  .case-directory a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="cover" id="top">
+  <div class="kicker">PVL1501 · University of South Africa</div>
+  <h1>The Law of <em>Persons</em></h1>
+  <p class="subtitle">A comprehensive study guide to the law of persons, covering all prescribed cases and key concepts.</p>
+  <div class="meta">Built from study guide & Heaton (5th ed)</div>
+</header>
+
+<nav class="toc">
+  <h2>What's Inside</h2>
+  <ol>
+    <li><a href="#u2">Introduction to the Law of Persons</a></li>
+    <li><a href="#u3">The Beginning of Legal Personality</a></li>
+    <li><a href="#u4">Interests of the Unborn Child (Nasciturus)</a></li>
+    <li><a href="#u5">The End of Legal Personality</a></li>
+    <li><a href="#u6">Status — Defining Key Concepts</a></li>
+    <li><a href="#u7">Domicile</a></li>
+    <li><a href="#u8">Children Born of Unmarried Parents</a></li>
+    <li><a href="#u9">Status & Change of Status of Children Born of Unmarried Parents</a></li>
+    <li><a href="#u10">Minority — Introduction</a></li>
+    <li><a href="#u11">The Legal Status of an Infans</a></li>
+    <li><a href="#u12">The Legal Status of a Minor — General Principles</a></li>
+    <li><a href="#u13">Guardian's Assistance, Ratification & Statutory Exceptions</a></li>
+    <li><a href="#u14">Misrepresentation</a></li>
+    <li><a href="#u15">Unjustified Enrichment</a></li>
+    <li><a href="#u16">Restitutio in Integrum</a></li>
+    <li><a href="#u17">Other Juristic Acts, Litigation & Delictual/Criminal Liability</a></li>
+    <li><a href="#u18">Termination: Age, Marriage, Venia Aetatis</a></li>
+    <li><a href="#u19">Termination: Emancipation</a></li>
+    <li><a href="#u20">Diverse Factors Affecting Status</a></li>
+  </ol>
+</nav>
+
+<div class="case-directory">
+  <h3>Quick Case Directory</h3>
+  <ol>
+    <li><a href="#case-mtati">Road Accident Fund v Mtati</a> — prenatal injury (prescribed case)</li>
+    <li><a href="#case-ym">YM v LB</a> — DNA tests on minors (prescribed case)</li>
+    <li><a href="#case-klvc">KLVC v SDI</a> — section 21 Children's Act (prescribed case)</li>
+    <li><a href="#case-pinchin">Pinchin v Santam Insurance</a> — prenatal injury (first case)</li>
+    <li><a href="#case-boedel">Ex parte Boedel Steenkamp</a> — nasciturus & testate succession</li>
+    <li><a href="#case-chisholm">Chisholm v East Rand Proprietary Mines</a> — loss of support for unborn</li>
+    <li><a href="#case-shields">Shields v Shields</a> — maintenance for unborn child</li>
+    <li><a href="#case-rall">Christian League of SA v Rall</a> — curator ad litem for foetus</li>
+    <li><a href="#case-cla">Christian Lawyers Association v Minister of Health</a> — constitutionality of CTOPA</li>
+    <li><a href="#case-friedman">Friedman v Glicksman</a> — wrongful life</li>
+    <li><a href="#case-russell">Ex parte Estate Russell</a> — presumption of death factors</li>
+    <li><a href="#case-tjollo">Tjollo Ateljees v Small</a> — <em>monstrum</em> doctrine rejected</li>
+    <li><a href="#case-bhe">Bhe v Magistrate, Khayelitsha</a> — primogeniture unconstitutional</li>
+    <li><a href="#case-petersen">Petersen v Maintenance Officer</a> — grandparents' duty</li>
+    <li><a href="#case-fvl">F v L</a> — declaring a child of unmarried parents</li>
+    <li><a href="#case-nefler">Nefler v Nefler</a> — prisoner's domicile</li>
+  </ol>
+</div>
+
+<!-- ============================================================= -->
+<!-- UNIT 2 -->
+<!-- ============================================================= -->
+<section class="unit" id="u2">
+  <div class="unit-label">Unit 02</div>
+  <h2>Introduction to the Law of Persons</h2>
+
+  <p class="intro-para">The law of persons is the very first branch of private law you study — and there's a reason for that. Law exists to govern relationships between people. Before you can understand <em>anything</em> else (contracts, property, marriage, crime), you need to understand who the law recognises as a "person" in the first place.</p>
+
+  <h3>What is the Law of Persons?</h3>
+  <p>The law of persons is the part of private law that asks four questions about legal subjects:</p>
+  <ul>
+    <li>What <strong>kinds of legal subjects</strong> exist?</li>
+    <li>How does a legal subject <strong>begin</strong> and <strong>end</strong>?</li>
+    <li>What does <strong>legal status</strong> involve?</li>
+    <li>What factors <strong>affect</strong> a person's status?</li>
+  </ul>
+
+  <h3>Legal Subject vs Legal Object</h3>
+  <div class="plain">
+    <span class="tag">Plain English</span>
+    Think of it like a game. The <strong>players</strong> are legal subjects — they score, foul, win, lose. The <strong>ball, field, equipment</strong> are legal objects — used by players but can't play themselves.
+  </div>
+
+  <dl class="terms">
+    <dt>Legal subject</dt>
+    <dd>Any entity the law recognises as able to have <strong>rights, duties and capacities</strong>.</dd>
+    <dt>Legal object</dt>
+    <dd>Anything a legal subject can have rights in — but which cannot itself have rights. (A car, a house, an invention, your good name.)</dd>
+    <dt>Legal capacity</dt>
+    <dd>The ability to have rights and duties.</dd>
+  </dl>
+
+  <h3>Two Kinds of Legal Subjects</h3>
+  <div class="diagram">
+    <div class="branch">
+      <div class="branch-parent">LEGAL SUBJECTS (Persons in Law)</div>
+      <div class="branch-children">
+        <div class="branch-child">
+          <strong>Natural persons</strong>
+          Every human being — regardless of age, ability, or mental capacity.
+        </div>
+        <div class="branch-child">
+          <strong>Juristic (artificial) persons</strong>
+          Associations the law treats as persons in their own right, separate from their members.
+        </div>
+      </div>
+    </div>
+    <p class="caption">All humans are legal subjects. Not all legal subjects are humans.</p>
+  </div>
+
+  <h4>Juristic persons recognised in SA law</h4>
+  <ol>
+    <li>Associations incorporated under <strong>general legislation</strong> (companies, banks).</li>
+    <li>Associations <strong>specifically created by separate legislation</strong> (universities, Eskom, SABC).</li>
+    <li>Associations meeting common-law requirements (<em>universitates</em>).</li>
+  </ol>
+
+  <div class="case" id="case-tjollo">
+    <h5>Tjollo Ateljees (Eins) Bpk v Small</h5>
+    <span class="citation">1949 (1) SA 856 (A)</span>
+    <div class="case-row"><strong>Issue</strong><span>Whether the old Roman/Roman-Dutch doctrine of the <em>monstrum</em> (severely malformed child who could be killed with a magistrate's permission) still formed part of South African law.</span></div>
+    <div class="case-row"><strong>Held</strong><span>The court rejected the doctrine outright, stating that a "monstrum" in the Roman sense is a physical impossibility.</span></div>
+    <div class="case-pin"><strong>Why it matters:</strong> Confirms that <em>every</em> human being in modern SA law is a legal subject — no exception for disability or malformation.</div>
+  </div>
+
+  <div class="activity">
+    <div class="activity-title">Activity 2.1 — Testing your understanding</div>
+    <ol>
+      <li>Name the two classes of legal subjects recognised in South African law.</li>
+      <li>Is a <em>monstrum</em> regarded as a legal subject today?</li>
+      <li>Name the entities recognised as juristic persons.</li>
+      <li>Is a partnership a juristic person in our law?</li>
+    </ol>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <ol>
+        <li><strong>Natural persons</strong> and <strong>juristic persons</strong>.</li>
+        <li><strong>Yes</strong> — today any form of human life is a legal subject.</li>
+        <li>(a) Associations incorporated under general enabling legislation (e.g. banks, companies); (b) associations created by separate legislation (e.g. universities); (c) associations complying with the common-law requirements (<em>universitates</em>).</li>
+        <li><strong>No</strong> — a partnership is not a juristic person. The partners carry the rights and duties personally.</li>
+      </ol>
+    </div>
+  </div>
+
+  <h3>Transformative Constitutionalism</h3>
+  <p>The Constitution doesn't just set rules — it commits the country to <strong>changing society itself</strong>. "Transformative constitutionalism" means using law to move from an unjust past to a society based on dignity, equality and freedom. You'll see this theme throughout the law of persons.</p>
+
+  <h3>Customary Law</h3>
+  <ul>
+    <li><strong>Official customary law</strong> — the written-down version in textbooks and codes. Often criticised as distorted.</li>
+    <li><strong>Living customary law</strong> — how communities <em>actually</em> practise customary law today.</li>
+  </ul>
+
+  <a href="#top" class="back-top">↑ Back to top</a>
+</section>
+
+<!-- ============================================================= -->
+<!-- UNIT 3 -->
+<!-- ============================================================= -->
+<section class="unit" id="u3">
+  <div class="unit-label">Unit 03</div>
+  <h2>The Beginning of Legal Personality</h2>
+
+  <p class="intro-para">Before you are born, you are not a legal subject. Legal personality begins at <strong>birth</strong> — but what exactly counts as "birth" in law?</p>
+
+  <h3>The Two Requirements</h3>
+  <div class="diagram">
+    <div class="flow">
+      <div class="flow-node">Mother is pregnant — foetus is not yet a legal subject</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node soft"><strong>Requirement 1:</strong> Birth must be <em>fully completed</em> (body of mother and body of child completely separated). <em>The umbilical cord does NOT need to be cut.</em></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node soft"><strong>Requirement 2:</strong> The child must <em>live</em> after separation — even for a short time. (The "born-alive rule".)</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node accent">LEGAL PERSONALITY BEGINS ✓</div>
+    </div>
+    <p class="caption">Both requirements must be met. A stillborn child never acquires legal personality.</p>
+  </div>
+
+  <div class="mnemonic">
+    <span class="tag">Remember</span>
+    "Completely separated + any sign of life = a legal person is born."
+  </div>
+
+  <h4>How is "life after birth" proved?</h4>
+  <p>SA law has not authoritatively decided. <strong>Evidence that the child breathed</strong> is normally accepted, but any medical evidence is admissible.</p>
+
+  <h4>What about viability?</h4>
+  <p>Some older authors said the child must also be "viable" (able to exist independently of the mother's body). <strong>Heaton rejects this</strong> — viability is a vague concept that leads to impossible problems of evidence. <em>Viability is NOT a requirement in SA law.</em></p>
+
+  <div class="activity">
+    <div class="activity-title">Activity 3.1 — Beginning of legal personality</div>
+    <ol>
+      <li>At what moment does legal personality commence?</li>
+      <li>Name the two requirements for the beginning of legal personality.</li>
+      <li>True or false (with reasons): "For birth to be completed, the umbilical cord must be severed."</li>
+    </ol>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <ol>
+        <li>At <strong>birth</strong>.</li>
+        <li>(a) The birth must be fully completed — the bodies must be completely separated; (b) the child must live after separation, even briefly.</li>
+        <li><strong>False.</strong> Separation means the bodies are apart — the umbilical cord does not need to be cut for birth to be legally complete.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="activity-title">Activity 3.2 — Viability and proof of life</div>
+    <ol>
+      <li>How is it determined whether a child lived after birth?</li>
+      <li>Complete: "Viability means that the child must have reached a stage of development where she can ________ ________ of her mother's body."</li>
+      <li>What is Heaton's objection to viability as a requirement?</li>
+    </ol>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <ol>
+        <li>Not authoritatively decided in our law. Evidence that the child breathed is usually accepted, but any medical evidence is admissible.</li>
+        <li><strong>Exist independently</strong> of her mother's body.</li>
+        <li>Heaton objects because viability is a <strong>vague concept</strong> that creates impossible problems of evidence.</li>
+      </ol>
+    </div>
+  </div>
+
+  <h3>Registration of Births — Births and Deaths Registration Act 51 of 1992</h3>
+  <ul>
+    <li>Every live birth must be reported to the Director-General of Home Affairs.</li>
+    <li>Where possible, <strong>both parents</strong> register the birth.</li>
+    <li>If the father is unknown/unavailable, the <strong>mother</strong> registers.</li>
+    <li>Special procedure for <strong>abandoned children</strong>.</li>
+    <li>Different rules apply based on timing: within 30 days, after 30 days, or when the child is over one year old.</li>
+    <li>Child born of married parents → registered under father's surname (or mother's, or double-barrel).</li>
+    <li>Child born of unmarried parents → registered under mother's surname by default.</li>
+  </ul>
+
+  <div class="activity">
+    <div class="activity-title">Activity 3.3 — Registration</div>
+    <ol>
+      <li>Summarise the main sections of the Births and Deaths Registration Act dealing with registration of children born of married vs unmarried parents.</li>
+      <li>List the documents that must accompany a notice of birth.</li>
+    </ol>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <ol>
+        <li>Your summary should cover: which births must be registered and by whom; under whose name a child born of married vs unmarried parents is registered; and circumstances in which a child born of unmarried parents' registration may be changed.</li>
+        <li>Distinguish the documents needed: (a) if notice is given <strong>within 30 days</strong> of birth; (b) <strong>after 30 days</strong>; and (c) if the child is <strong>older than one year</strong>. Also note the special procedure for abandoned children.</li>
+      </ol>
+    </div>
+  </div>
+
+  <a href="#top" class="back-top">↑ Back to top</a>
+</section>
+
+<!-- ============================================================= -->
+<!-- UNIT 4 -->
+<!-- ============================================================= -->
+<section class="unit" id="u4">
+  <div class="unit-label">Unit 04</div>
+  <h2>Interests of the Unborn Child (<em>Nasciturus</em>)</h2>
+
+  <p class="intro-para">Unit 3 said legal personality only begins at birth. But what if something happens <em>before</em> the child is born that would benefit them after birth? This is where the <em>nasciturus fiction</em> steps in.</p>
+
+  <h3>What is the Nasciturus Fiction?</h3>
+  <dl class="terms">
+    <dt>Nasciturus</dt>
+    <dd>A conceived but unborn child (a foetus).</dd>
+    <dt>Fiction</dt>
+    <dd>Something the law <em>pretends</em> is true even though it isn't.</dd>
+    <dt>The nasciturus fiction</dt>
+    <dd>Whenever it would be to the advantage of the unborn child, the law treats them <strong>as if they had already been born at the time of conception</strong>.</dd>
+    <dt>In abeyance</dt>
+    <dd>"Held aside" — the rights are parked until we know whether the baby will be born alive.</dd>
+  </dl>
+
+  <h3>The Two Requirements</h3>
+  <div class="diagram">
+    <div class="flow">
+      <div class="flow-node"><strong>1.</strong> The child must have been <em>conceived</em> when the benefit would have accrued.</div>
+      <div class="flow-arrow">+</div>
+      <div class="flow-node"><strong>2.</strong> The child must be <em>subsequently born alive</em>.</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node accent">Fiction applies — benefit goes to the child</div>
+    </div>
+  </div>
+
+  <h4>The "must benefit" rule</h4>
+  <p>The fiction only operates if applying it would benefit the <em>nasciturus</em>. It can still apply where both the child <em>and</em> a third party benefit — but <em>not</em> where only third parties would benefit.</p>
+
+  <div class="activity">
+    <div class="activity-title">Activity 4.1 — Requirements of the fiction</div>
+    <ol>
+      <li>Fill in the missing words: "The law protects the unborn child's ________ ________ by pretending the <em>nasciturus</em> was born at the time of ________. The position is kept in ________ until birth."</li>
+      <li>List the two requirements for the fiction to apply.</li>
+      <li>Give an example where the fiction would benefit <em>only</em> third parties.</li>
+      <li>Give an example where the fiction benefits both the <em>nasciturus</em> and a third party.</li>
+    </ol>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <ol>
+        <li><strong>potential interests</strong>, <strong>conception</strong>, <strong>abeyance</strong>.</li>
+        <li>(a) Conceived at the time the benefit would have accrued; (b) subsequently born alive.</li>
+        <li>The unborn child was entitled to inherit, but dies shortly after birth. Only the child's own intestate heirs (not the child) would benefit — so the fiction does not apply.</li>
+        <li>Grandpa leaves money to the unborn child; the child is born alive and inherits. Both the child (directly) and the parents (because the child can now support themselves, reducing maintenance burden) benefit.</li>
+      </ol>
+    </div>
+  </div>
+
+  <h3>Where the Fiction Applies</h3>
+
+  <h4>4.3.1 Patrimonial Interests — Succession</h4>
+
+  <div class="case" id="case-boedel">
+    <h5>Ex parte Boedel Steenkamp</h5>
+    <span class="citation">1962 (3) SA 954 (O)</span>
+    <div class="case-row"><strong>Facts</strong><span>A testator left the residue of his estate to his daughter and her children "who are alive at the time of my death". When he died, the daughter had two children (D and G) already born, and was pregnant with P, who was later born alive.</span></div>
+    <div class="case-row"><strong>Issue</strong><span>Could P (the unborn child at the time of death) share in the inheritance along with D and G?</span></div>
+    <div class="case-row"><strong>Held</strong><span>Yes. Judge De Villiers applied the <em>nasciturus fiction</em>: a conceived child is presumed alive for purposes of succession provided the child is later born alive and the fiction benefits the child. P was included in the inheritance.</span></div>
+    <div class="case-row"><strong>Note</strong><span>Heaton criticises this decision because the will's wording arguably excluded the unborn child — but the court held the testator's intention was not unambiguously exclusive.</span></div>
+    <div class="case-pin"><strong>Why it matters:</strong> Classic application of the fiction in testate succession — the leading SA case on the point.</div>
+  </div>
+
+  <div class="activity">
+    <div class="activity-title">Activity 4.2 — Testate succession</div>
+    <ol>
+      <li>Distinguish testate from intestate succession in one or two sentences.</li>
+      <li>C was conceived when the testator died, and born alive afterwards. In each clause below, does C inherit?
+        <ul>
+          <li>(a) "I leave my estate to A, B and D."</li>
+          <li>(b) "I leave my estate to my daughter's children, born or still to be born."</li>
+          <li>(c) "I leave my estate to my grandchildren alive at my death."</li>
+        </ul>
+      </li>
+    </ol>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <ol>
+        <li><strong>Testate succession</strong>: the deceased left a valid will. <strong>Intestate succession</strong>: the deceased left no will — distribution follows the Intestate Succession Act.</li>
+        <li>(a) <strong>No</strong> — the testator named specific beneficiaries; C is not mentioned. (b) <strong>Yes</strong> — the testator's intention clearly includes the unborn. (c) <strong>Yes</strong> (<em>Ex parte Boedel Steenkamp</em>) — applying the <em>nasciturus fiction</em>, C is deemed alive at the testator's death.</li>
+      </ol>
+    </div>
+  </div>
+
+  <h4>4.3.1 Patrimonial Interests — Maintenance after birth</h4>
+
+  <div class="case" id="case-shields">
+    <h5>Shields v Shields</h5>
+    <span class="citation">1946 CPD 242</span>
+    <div class="case-row"><strong>Facts</strong><span>A pregnant woman divorced the father of her unborn child. They entered a settlement agreement stating the father would NOT be liable for the child's maintenance after birth, and asked the court to make it part of the divorce order.</span></div>
+    <div class="case-row"><strong>Held</strong><span>The court refused. A mother cannot waive her unborn child's right to claim maintenance — such an agreement is <em>contra bonos mores</em> (against good morals / the community's legal convictions).</span></div>
+    <div class="case-pin"><strong>Why it matters:</strong> The unborn child's future right to maintenance cannot be bargained away by either parent.</div>
+  </div>
+
+  <h4>4.3.1 Patrimonial Interests — Dependant's action for loss of support</h4>
+
+  <div class="case" id="case-chisholm">
+    <h5>Chisholm v East Rand Proprietary Mines Ltd</h5>
+    <span class="citation">1909 TH 297</span>
+    <div class="case-row"><strong>Facts</strong><span>A child's father was killed by another person's delict before the child was born. The child, once born alive, sued for loss of support.</span></div>
+    <div class="case-row"><strong>Held</strong><span>The child can recover. This was the first SA case applying the <em>nasciturus fiction</em> in the law of delict.</span></div>
+    <div class="case-pin"><strong>Why it matters:</strong> Opened the door for delictual claims where the wrongful act happens before the child's birth.</div>
+  </div>
+
+  <h4>4.3.2 Prenatal Injury</h4>
+
+  <div class="case" id="case-pinchin">
+    <h5>Pinchin v Santam Insurance Co Ltd</h5>
+    <span class="citation">1963 (2) SA 254 (W)</span>
+    <div class="case-row"><strong>Facts</strong><span>A pregnant woman was injured in a car accident. Her child was born with cerebral palsy. The father alleged the brain injuries were caused by the negligent driver.</span></div>
+    <div class="case-row"><strong>Issue</strong><span>Can a person sue for injuries inflicted while still a foetus?</span></div>
+    <div class="case-row"><strong>Held</strong><span>Judge Hiemstra ruled that <strong>in principle</strong> a child has an action for prenatal injury — but applied the <em>nasciturus fiction</em> as the basis. On the facts, the action still failed because brain damage was not proved to be caused by the accident.</span></div>
+    <div class="case-pin"><strong>Why it matters:</strong> First SA case to recognise prenatal injury claims — though its reliance on the <em>nasciturus fiction</em> was later criticised.</div>
+  </div>
+
+  <div class="case" id="case-mtati">
+    <h5>Road Accident Fund v Mtati ★ PRESCRIBED CASE</h5>
+    <span class="citation">2005 (6) SA 215 (SCA)</span>
+    <div class="case-row"><strong>Facts</strong><span>A pregnant woman was knocked down and seriously injured by a negligent driver. Her child Z was later born with brain injuries and a mental disability. Z's father, as natural guardian, sued the Road Accident Fund on Z's behalf.</span></div>
+    <div class="case-row"><strong>RAF's special plea</strong><span>(1) An unborn child is not a person and cannot claim compensation; (2) a driver owes no duty of care to an unborn child.</span></div>
+    <div class="case-row"><strong>Legal question</strong><span>Does Z have a claim for prenatal injuries? Should it be based on the <em>nasciturus fiction</em> or on the ordinary law of delict?</span></div>
+    <div class="case-row"><strong>Held</strong><span>The SCA <strong>dismissed the RAF's appeal</strong>. The child <em>does</em> have a claim, but based on the <strong>ordinary principles of the law of delict</strong> — NOT the <em>nasciturus fiction</em>. The delictual right of action becomes "complete" when the child is born alive. Elements of a delict (wrongfulness, damage) don't have to arise simultaneously.</span></div>
+    <div class="case-row"><strong>Reasoning</strong><span>It would be "intolerable" if our law gave no action for prenatal injuries. Using the fiction was unnecessary and undesirable in delict.</span></div>
+    <div class="case-pin"><strong>Why it matters (exam critical):</strong> Settled the debate. All future prenatal injury claims → ordinary law of delict. The <em>nasciturus fiction</em> still applies elsewhere (e.g. succession).</div>
+  </div>
+
+  <div class="activity">
+    <div class="activity-title">Activity 4.4 — Prenatal injury case</div>
+    <ol>
+      <li>In which case was the debate about prenatal injury resolved?</li>
+      <li>Briefly discuss that case and explain why we say the debate has been laid to rest.</li>
+      <li>List the four components of a case summary.</li>
+    </ol>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <ol>
+        <li><em>Road Accident Fund v Mtati</em> 2005 (6) SA 215 (SCA) — Case [1] in your Prescribed Reader.</li>
+        <li>The SCA held prenatal injury claims must be decided using the <strong>ordinary law of delict</strong>, not the <em>nasciturus fiction</em>. A child's delictual right of action becomes "complete" at live birth. The debate ended because the highest relevant court pronounced definitively — lower courts must follow.</li>
+        <li><strong>(a) Facts, (b) legal question, (c) judgment (answer to the question), (d) reasons (<em>rationes decidendi</em>).</strong></li>
+      </ol>
+    </div>
+  </div>
+
+  <h4>4.3.3 Guardianship and Care</h4>
+  <p>Where a pregnant woman divorces, the court can include orders regarding the unborn child's guardianship and care, to avoid further litigation after birth.</p>
+
+  <h4>4.3.4 Termination of Pregnancy — Choice on Termination of Pregnancy Act 92 of 1996</h4>
+  <div class="diagram">
+    <table class="compare">
+      <tr><th>Gestation</th><th>Grounds for termination</th><th>Consent</th></tr>
+      <tr><td>Weeks 1–12</td><td>On request — any reason.</td><td>Pregnant woman alone</td></tr>
+      <tr><td>Weeks 13–20</td><td>Risk to woman's health; severe foetal abnormality; rape/incest; significant socio-economic harm.</td><td>Pregnant woman alone</td></tr>
+      <tr><td>After 20 weeks</td><td>Life-endangering to woman; severe malformation of foetus; risk of injury to foetus.</td><td>Pregnant woman alone</td></tr>
+    </table>
+  </div>
+
+  <div class="case" id="case-rall">
+    <h5>Christian League of Southern Africa v Rall</h5>
+    <span class="citation">1981 (2) SA 821 (O)</span>
+    <div class="case-row"><strong>Facts</strong><span>An organisation applied for the appointment of a <em>curator ad litem</em> (a legal guardian for litigation purposes) to represent the interests of a foetus in matters concerning a proposed termination of pregnancy.</span></div>
+    <div class="case-row"><strong>Held</strong><span>Application dismissed. A child has no rights that can be enforced on its behalf before being born alive — because legal personality begins at birth. The court also expressed the view that the protection of a foetus is based on a <em>fiction</em>.</span></div>
+    <div class="case-pin"><strong>Why it matters:</strong> Pre-constitutional authority that a foetus is not a legal subject with enforceable rights.</div>
+  </div>
+
+  <div class="case" id="case-cla">
+    <h5>Christian Lawyers Association of SA v Minister of Health (No 1)</h5>
+    <span class="citation">1998 (4) SA 1113 (T)</span>
+    <div class="case-row"><strong>Facts</strong><span>The plaintiffs argued that human life begins at conception and that the Choice on Termination of Pregnancy Act is unconstitutional because it contravenes section 11 (right to life).</span></div>
+    <div class="case-row"><strong>Held</strong><span>McCreath J rejected the argument. No provision of the Constitution bestows legal personality or protection on the foetus. The Constitution does not qualify a woman's right to bodily autonomy to protect a foetus.</span></div>
+    <div class="case-pin"><strong>Why it matters:</strong> Confirmed the foetus has no constitutional right to life enforceable against the pregnant woman's right to choose.</div>
+  </div>
+
+  <div class="case">
+    <h5>Christian Lawyers Association of SA v Minister of Health (No 2)</h5>
+    <span class="citation">2005 (1) SA 509 (T) — "Reproductive Health Alliance as amicus"</span>
+    <div class="case-row"><strong>Facts</strong><span>Challenge to the provisions allowing a minor to consent independently to termination of her own pregnancy (without parental consent).</span></div>
+    <div class="case-row"><strong>Held</strong><span>The court upheld the provisions. The cornerstone of the Act is <strong>informed consent</strong>. If the minor has the maturity to give informed consent, she may choose. The minor must be <em>advised</em> to consult parents/guardian, but the termination cannot be denied if she refuses.</span></div>
+    <div class="case-pin"><strong>Why it matters:</strong> Even a pregnant minor decides alone — parental consent is not required for termination of pregnancy under the CTOP Act.</div>
+  </div>
+
+  <div class="case" id="case-friedman">
+    <h5>Friedman v Glicksman</h5>
+    <span class="citation">1996 (1) SA 1134 (W)</span>
+    <div class="case-row"><strong>Held</strong><span>Goldblatt J indicated that the <em>nasciturus fiction</em> is NOT the basis for a wrongful life action. The child's action arises not when the pregnancy is not terminated, but when the child is actually born.</span></div>
+    <div class="case-pin"><strong>Why it matters:</strong> Supports the view that the <em>nasciturus fiction</em> is unnecessary — ordinary delict principles suffice.</div>
+  </div>
+
+  <h4>4.3.5 Sterilisation — Sterilisation Act 44 of 1998</h4>
+  <ul>
+    <li><strong>Majors (18+):</strong> May consent to voluntary sterilisation themselves.</li>
+    <li><strong>Minors:</strong> May only be sterilised if life would be jeopardised or seriously impaired otherwise.</li>
+    <li><strong>Persons unable to consent:</strong> Specific procedure considering best interests.</li>
+  </ul>
+
+  <div class="activity">
+    <div class="activity-title">Activity 4.5 — Sterilisation</div>
+    <ol>
+      <li>Fill in: "The ________ ________ of anyone who has reached the age of ____ years is permitted to consent to sterilisation."</li>
+      <li>Under what circumstances may a minor be sterilised?</li>
+    </ol>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <ol>
+        <li><strong>Voluntary sterilisation</strong>; age <strong>18</strong>.</li>
+        <li>Only if the minor's life would be jeopardised or seriously impaired if the sterilisation were not performed.</li>
+      </ol>
+    </div>
+  </div>
+
+  <h3>Nasciturus Fiction vs Nasciturus Rule — The Debate</h3>
+  <table class="compare">
+    <tr><th></th><th>Nasciturus Fiction</th><th>Nasciturus Rule</th></tr>
+    <tr><td>Legal personality begins at…</td><td><strong>Birth</strong> (always)</td><td>Sometimes at <strong>conception</strong>, sometimes at birth</td></tr>
+    <tr><td>Is the foetus a legal subject?</td><td>No — we just pretend</td><td>Yes, whenever its interests are at stake</td></tr>
+    <tr><td>Supporters</td><td>Heaton, Boezaart, Kruger & Robinson</td><td>Van der Merwe, Van der Vyver & Joubert</td></tr>
+  </table>
+
+  <div class="activity">
+    <div class="activity-title">Activity 4.6 — Fiction vs Rule</div>
+    <ol>
+      <li>At what moment does legal personality begin, according to supporters of (a) the fiction and (b) the rule?</li>
+      <li>Which writers support each approach?</li>
+    </ol>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <ol>
+        <li>(a) Fiction: personality begins at <strong>birth</strong>. (b) Rule: personality begins at <strong>conception</strong> whenever interests are at stake.</li>
+        <li>Fiction: Heaton, Boezaart, Kruger & Robinson. Rule: Van der Merwe, Van der Vyver & Joubert.</li>
+      </ol>
+    </div>
+  </div>
+
+  <a href="#top" class="back-top">↑ Back to top</a>
+</section>
+
+<!-- ============================================================= -->
+<!-- UNIT 5 -->
+<!-- ============================================================= -->
+<section class="unit" id="u5">
+  <div class="unit-label">Unit 05</div>
+  <h2>The End of Legal Personality</h2>
+
+  <p class="intro-para">Legal personality ends at death. But death isn't always simple — sometimes a person just disappears, and the law needs a way to deal with that uncertainty.</p>
+
+  <h3>When is Someone Legally Dead?</h3>
+  <p>Before the <strong>National Health Act 61 of 2003</strong>, SA had no legal definition of death. The Act introduced <strong>brain death</strong> as the criterion — but only for specific purposes (health services, organ donation, post-mortems). For other purposes, courts rely on medical evidence.</p>
+
+  <div class="activity">
+    <div class="activity-title">Activity 5.1 — Defining death</div>
+    <p>What criteria are applied to determine when a person is legally dead?</p>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <p>Prior to the National Health Act 61 of 2003, no legal definition existed. The Act adopted <strong>brain death</strong> for the specific matters it governs (organ/tissue donation, post-mortems, etc.). In other contexts, courts rely on medical evidence as before.</p>
+    </div>
+  </div>
+
+  <h3>When a Person Disappears — Presumption of Death</h3>
+
+  <div class="activity">
+    <div class="activity-title">Activity 5.2 — Two procedures</div>
+    <p>Name the two procedures under which a presumption of death order can be granted.</p>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <p>(1) <strong>Common-law procedure</strong> — any interested person applies to the High Court. (2) <strong>Statutory procedure</strong> — under the Inquests Act 58 of 1959 when unnatural death is suspected.</p>
+    </div>
+  </div>
+
+  <h3>Comparison Table — Common Law vs Statutory</h3>
+  <div class="diagram">
+    <table class="compare">
+      <tr><th></th><th>Common-Law Presumption</th><th>Statutory Presumption</th></tr>
+      <tr><td>When used</td><td>Person missing, no certainty if alive or dead</td><td>Suspected unnatural death</td></tr>
+      <tr><td>Who applies</td><td><strong>Any interested person</strong> — spouse, child, creditor, heir</td><td>The <strong>State</strong> (a magistrate)</td></tr>
+      <tr><td>Court</td><td>High Court where missing person was domiciled</td><td>Magistrate → confirmed by High Court</td></tr>
+      <tr><td>Burden of proof</td><td>Preponderance of probabilities</td><td>Beyond reasonable doubt</td></tr>
+      <tr><td>Applicable law</td><td>Common law</td><td>Inquests Act 58 of 1959</td></tr>
+      <tr><td>Marriage / civil union</td><td><strong>Not automatically dissolved</strong> — separate application under Dissolution of Marriages on Presumption of Death Act 23 of 1979</td><td><strong>Automatically dissolved</strong></td></tr>
+    </table>
+  </div>
+
+  <div class="case" id="case-russell">
+    <h5>Ex parte Estate Russell</h5>
+    <span class="citation">1926 WLD 118</span>
+    <div class="case-row"><strong>Facts</strong><span>Application for a presumption-of-death order for a missing person.</span></div>
+    <div class="case-row"><strong>Held</strong><span>The court laid down the key factors to consider: (1) the age of the missing person; (2) the length of absence; (3) whether the person was engaged in a dangerous trade/occupation; (4) general circumstances. In the absence of evidence of dangerous occupation, mere long absence is not enough.</span></div>
+    <div class="case-pin"><strong>Why it matters:</strong> Leading authority on the factors a court considers in a common-law presumption-of-death application. <em>No fixed period</em> applies in SA law — 30 years has been refused; shorter periods have sufficed when probability of death is very high.</div>
+  </div>
+
+  <div class="activity">
+    <div class="activity-title">Activity 5.3 — Common-law application</div>
+    <ol>
+      <li>Who can apply for a common-law presumption of death?</li>
+      <li>What facts must be brought to the court's attention?</li>
+      <li>What procedure does the court follow after hearing the application?</li>
+    </ol>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <ol>
+        <li>Any interested person (e.g. spouse, child, creditor of the missing person).</li>
+        <li>(a) Age of the person when they went missing; (b) how long they have been absent; (c) whether they were engaged in a dangerous trade/occupation. (See <em>Ex parte Estate Russell</em>.)</li>
+        <li>Usually a <strong>return date</strong> (<em>rule nisi</em>) is set. Notice is given to interested parties and published in the local press and Government Gazette, giving anyone else a chance to come forward before the final order is made.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="activity-title">Activity 5.4 — Mr Jonas scenario</div>
+    <p>Mr Jonas has been missing for 20 years since the aeroplane he was travelling in disappeared off the Durban coast.</p>
+    <ol>
+      <li>May Mrs Jonas apply for a presumption of death order?</li>
+      <li>In English law, 7 years' absence is standard. What about SA?</li>
+      <li>What factors will the court consider?</li>
+    </ol>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <ol>
+        <li><strong>Yes</strong> — any interested person may apply. Mrs Jonas, as spouse, qualifies.</li>
+        <li>SA has <strong>no fixed period</strong>. Length of absence is one factor among several, not decisive on its own.</li>
+        <li>Per <em>Ex parte Estate Russell</em>: age, length of absence, dangerous occupation/circumstances (an aeroplane disappearance is a very strong factor here). A 20-year absence combined with these circumstances creates a strong case.</li>
+      </ol>
+    </div>
+  </div>
+
+  <h3>Effect of a Presumption of Death Order</h3>
+  <ul>
+    <li>The estate can be <strong>administered as if the person were dead</strong>.</li>
+    <li>The presumption is <strong>rebuttable</strong> — can be set aside if further evidence shows the person is alive.</li>
+    <li>If the person reappears, they can sue those enriched at their expense for return of property.</li>
+    <li>If the court refuses, it may still order the estate to be <strong>divided among heirs</strong> — who must give security for return.</li>
+  </ul>
+
+  <div class="activity">
+    <div class="activity-title">Activity 5.5 — After the order</div>
+    <p>Mrs Jonas has successfully obtained an order of presumption of death for her husband, missing 6 months.</p>
+    <ol>
+      <li>Can the estate now be administered?</li>
+      <li>What if the missing person turns out to be alive?</li>
+    </ol>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <ol>
+        <li><strong>Yes</strong> — the estate is administered in the normal way, as if death were proved.</li>
+        <li>The presumption is <strong>rebuttable</strong>. The court that made the order can set it aside. The missing person can sue for enrichment against anyone unjustly enriched at their expense.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="activity-title">Activity 5.6 — Remarriage</div>
+    <p>Mrs Jonas has a successful presumption of death order (common-law procedure). She wants to marry Mr Sibanyone.</p>
+    <ol>
+      <li>Under what Act does she apply to dissolve her marriage?</li>
+      <li>Is a separate application necessary?</li>
+      <li>What is the effect of the dissolution order?</li>
+    </ol>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <ol>
+        <li>The <strong>Dissolution of Marriages on Presumption of Death Act 23 of 1979</strong>.</li>
+        <li><strong>Yes</strong>, in the common-law procedure. The court is not bound to grant the order but has a discretion.</li>
+        <li>The marriage/civil union is <strong>deemed dissolved by death</strong> for all purposes. She can remarry.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="activity-title">Activity 5.7 — Statutory procedure</div>
+    <p>A presumption of death was expressed under the Inquests Act. Is a separate application to dissolve the marriage necessary?</p>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <p><strong>No.</strong> Section 2 of the Dissolution of Marriages on Presumption of Death Act provides that a presumption under the Inquests Act, once confirmed by the High Court, <strong>automatically dissolves</strong> the marriage/civil union.</p>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="activity-title">Activity 5.8 — Refusal but division</div>
+    <p>Mrs Jonas's application was NOT successful. May the estate still be divided among heirs?</p>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <p><strong>Yes.</strong> Even if the court refuses to express a presumption, it may still order the missing person's property divided among heirs, typically subject to the heirs giving <strong>sufficient security</strong> for its return if the missing person reappears.</p>
+    </div>
+  </div>
+
+  <h3>Sequence of Death (Commorientes)</h3>
+  <p>When several people die in the same disaster (plane crash, car accident), determining who died first matters for inheritance. SA law has <strong>no presumption</strong> — the party alleging a sequence must prove it on a balance of probabilities.</p>
+
+  <h3>Registration of Deaths & Duty to Bury</h3>
+  <ul>
+    <li>Every death must be reported to the Director-General of Home Affairs.</li>
+    <li>A <strong>burial order</strong> must be issued before burial or cremation.</li>
+    <li>The deceased's expressed wishes about funeral/burial generally take priority; the heir has the duty to bury.</li>
+  </ul>
+
+  <div class="activity">
+    <div class="activity-title">Activity 5.9 — Conflicting burial wishes</div>
+    <p>Thomas died. On his deathbed he told his girlfriend he wanted to be cremated and his ashes scattered on his birth farm. Two years before, his will said he should be buried next to his father in the family graveyard. In his will he named his mother as sole heir. Girlfriend wants cremation; mother wants burial. What happens?</p>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <p>The deceased's <strong>expressed wishes</strong> regarding burial are generally respected. The <strong>will is the most reliable written expression</strong> of his wishes. The more recent informal deathbed statement may be considered, but courts generally prefer the clearer, written directive. The heir (the mother) has the legal duty to bury and practical authority — she should act in accordance with Thomas's wishes as expressed in the will, meaning <strong>burial in the family graveyard</strong>. Courts balance practical considerations, fairness and family relationships.</p>
+    </div>
+  </div>
+
+  <a href="#top" class="back-top">↑ Back to top</a>
+</section>
+
+<!-- ============================================================= -->
+<!-- UNIT 6 -->
+<!-- ============================================================= -->
+<section class="unit" id="u6">
+  <div class="unit-label">Unit 06</div>
+  <h2>Status — Defining Key Concepts</h2>
+
+  <p class="intro-para">We now move from <em>whether</em> someone is a legal subject to <em>what kind</em> of legal subject they are. This is the world of "status" — the attributes affecting what a person can and cannot do in law.</p>
+
+  <h3>What is Status?</h3>
+  <p>Status comes from the Latin <em>stare</em> — "to stand". It is a person's "standing" in the law. Main status-affecting factors in private law: domicile, birth of unmarried parents, youth, physical or mental illness/incapacity, intoxication, prodigality, insolvency.</p>
+
+  <div class="plain">
+    <span class="tag">Customary Law Note</span>
+    In customary law, "status" refers to <strong>social standing</strong>, not legal standing. A first wife in a polygynous marriage has higher social status than later wives — but her <em>legal</em> status is the same.
+  </div>
+
+  <div class="case" id="case-bhe">
+    <h5>Bhe v Magistrate, Khayelitsha (Commission for Gender Equality as Amicus Curiae)</h5>
+    <span class="citation">2005 (1) SA 580 (CC)</span>
+    <div class="case-row"><strong>Issue</strong><span>Constitutionality of the customary-law rule of male primogeniture (only the eldest male heir inherits).</span></div>
+    <div class="case-row"><strong>Held</strong><span>The Constitutional Court declared the rule <strong>unconstitutional</strong> because it discriminated against women and against children not born first.</span></div>
+    <div class="case-pin"><strong>Why it matters:</strong> Landmark decision dismantling gender-based inequality in customary law of succession.</div>
+  </div>
+
+  <h3>The Four Capacities</h3>
+  <div class="diagram">
+    <div class="branch">
+      <div class="branch-parent">CAPACITIES A LEGAL SUBJECT CAN HAVE</div>
+      <div class="branch-children">
+        <div class="branch-child"><strong>1. Legal capacity</strong>To have rights and duties. <em>All humans have this.</em> Even a baby, an insolvent, a mentally ill person.</div>
+        <div class="branch-child"><strong>2. Capacity to act</strong>To perform valid juristic acts (e.g. sign a contract, make a will). <em>Limited or absent</em> for some.</div>
+        <div class="branch-child"><strong>3. Capacity to litigate</strong>To appear in court as a party. <em>Usually mirrors capacity to act.</em></div>
+        <div class="branch-child"><strong>4. Accountability</strong>To be held liable for crimes and delicts. Requires ability to distinguish right from wrong.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="keybox">
+    <h4>Critical Distinction</h4>
+    <p><strong>Legal capacity</strong> (the capacity to <em>have</em> rights) is <em>not</em> the same as the rights you actually have right now. A baby has legal capacity — they <em>can</em> own property — even if they don't own any yet.</p>
+  </div>
+
+  <div class="example">
+    A 5-year-old child:<br>
+    ✅ Has legal capacity (can inherit, own toys, be a crime victim)<br>
+    ❌ Has <em>no</em> capacity to act (cannot sign a valid contract)<br>
+    ❌ Has <em>no</em> capacity to litigate (parent acts for them)<br>
+    ❌ Has <em>no</em> accountability (cannot be held criminally or delictually liable on the basis of fault)
+  </div>
+
+  <h3>Why Age / Mental Capacity Affects Status</h3>
+  <p>To perform a valid juristic act, you need <strong>reasonable understanding and judgement</strong> — the ability to grasp the <em>nature, purport and consequences</em> of your acts. Persons under 18 are assumed not yet to have this fully, so their capacities are limited to protect them.</p>
+
+  <div class="activity">
+    <div class="activity-title">Test Yourself — Status concepts</div>
+    <ol>
+      <li>What do you understand by the term "status"?</li>
+      <li>How is "status" understood in customary law?</li>
+      <li>What is "legal capacity"?</li>
+      <li>Explain "capacity to act".</li>
+      <li>What is "capacity to litigate"?</li>
+      <li>Explain "accountability" (capacity to be held accountable for crimes and delicts).</li>
+    </ol>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <ol>
+        <li>A person's "standing" in law — the sum of attributes and conditions to which the law attaches consequences (e.g. being a minor, being domiciled somewhere, being insolvent).</li>
+        <li>Social standing, not legal standing. Influences social position (e.g. first wife in a polygynous marriage) but not legal capacity.</li>
+        <li>The capacity to <em>have</em> rights and duties — held by all humans.</li>
+        <li>The capacity to perform valid juristic acts (contracts, wills, marriages). May be limited (minors) or absent (<em>infans</em>, seriously mentally ill).</li>
+        <li>The capacity to appear in court as a litigating party. Closely linked to capacity to act.</li>
+        <li>The capacity to be at fault — to be held liable for crimes and delicts. Requires ability to tell right from wrong and act accordingly. Influenced by age and mental capacity.</li>
+      </ol>
+    </div>
+  </div>
+
+  <a href="#top" class="back-top">↑ Back to top</a>
+</section>
+
+<!-- ============================================================= -->
+<!-- UNIT 7 -->
+<!-- ============================================================= -->
+<section class="unit" id="u7">
+  <div class="unit-label">Unit 07</div>
+  <h2>Domicile</h2>
+
+  <p class="intro-para">In SA, your <em>lex domicilii</em> — the law of where you are domiciled — determines your status. So domicile matters hugely. And it's not the same as where you live.</p>
+
+  <h3>Why Domicile Matters</h3>
+  <p>Your <em>lex domicilii</em> determines:</p>
+  <ul>
+    <li>Whether you're a minor</li>
+    <li>Whether you were born of married or unmarried parents (domicile at birth = domicile of origin)</li>
+    <li>Intestate succession of your movable property</li>
+    <li>Your capacity to make a will for movable property</li>
+    <li>The matrimonial property system of your marriage (husband's domicile at marriage decides)</li>
+    <li>Court jurisdiction over matters of your status</li>
+  </ul>
+
+  <h3>Definition of Domicile</h3>
+  <div class="keybox">
+    <p>Domicile is the place where a person is <strong>deemed to be constantly present</strong>:
+    <ul style="margin-top: 8px;">
+      <li>for the purpose of <strong>exercising rights</strong>,</li>
+      <li>and <strong>fulfilling obligations</strong>,</li>
+      <li>even in the event of <strong>factual absence</strong>.</li>
+    </ul></p>
+  </div>
+
+  <div class="activity">
+    <div class="activity-title">Activity 7.1 — Components of domicile</div>
+    <p>List the different components of the definition of domicile.</p>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <p>(1) The place where the person is deemed constantly present; (2) for exercising rights; (3) and fulfilling obligations; (4) even when factually absent.</p>
+    </div>
+  </div>
+
+  <h3>General Principles</h3>
+  <ol>
+    <li><strong>Every person must have a domicile at all times</strong> — the law doesn't allow status to be undetermined.</li>
+    <li><strong>A change of domicile is never accepted without proof</strong> — once established at a place, that domicile persists until proven otherwise.</li>
+    <li><strong>No-one can have more than one domicile at a time.</strong></li>
+  </ol>
+
+  <p><em>Governing law:</em> The <strong>Domicile Act 3 of 1992</strong> replaced the common-law rules, in force from 1 August 1992 (not retrospective).</p>
+
+  <div class="activity">
+    <div class="activity-title">Activity 7.2 — Mnguni family (losing domicile)</div>
+    <p>Jabulani has moved out of his parents' home but hasn't found a new place yet. Can he "lose" his domicile before getting a new one?</p>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <p><strong>No.</strong> The Domicile Act (s 3(1)) provides that a person does not lose their previous domicile until they acquire a new one, whether by choice or by operation of law. Jabulani keeps his previous domicile until he acquires a new one.</p>
+    </div>
+  </div>
+
+  <h3>Three Kinds of Domicile</h3>
+  <div class="diagram">
+    <div class="branch">
+      <div class="branch-parent">DOMICILE</div>
+      <div class="branch-children">
+        <div class="branch-child"><strong>Domicile of origin</strong>The first domicile assigned at birth — typically the parent(s)'.</div>
+        <div class="branch-child"><strong>Domicile of choice</strong>Chosen by a capable adult. Requires <em>lawful presence</em> + <em>intention to settle indefinitely</em>.</div>
+        <div class="branch-child"><strong>Assigned domicile</strong>(by operation of law)For those who cannot choose — minors and mentally incapacitated persons. Place of <em>closest connection</em>.</div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Domicile of Choice — Two Requirements</h3>
+  <table class="compare">
+    <tr><th>Requirement</th><th>What it means</th><th>Assessed</th></tr>
+    <tr><td><em>Factum</em> (lawful presence)</td><td>Physically at the place, <strong>lawfully</strong>.</td><td>Objective</td></tr>
+    <tr><td><em>Animus</em> (intention)</td><td>Intention to <strong>settle indefinitely</strong>.</td><td>Subjective</td></tr>
+  </table>
+
+  <h4>Who cannot acquire a domicile of choice?</h4>
+  <ul>
+    <li>Minors (under 18, not married)</li>
+    <li>People lacking mental capacity to make a rational choice</li>
+  </ul>
+
+  <div class="activity">
+    <div class="activity-title">Activity 7.3 — Bongani's domicile</div>
+    <p>Consider the Mnguni family. Does Bongani (23, mentally ill) qualify as a person who can acquire a domicile of choice under section 1(1) of the Domicile Act?</p>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <p><strong>No.</strong> Section 1(1) requires the person to be 18+ OR a minor with major status, <strong>AND</strong> to have the <strong>mental capacity to make a rational choice</strong>. Although Bongani is 23 (a major), his mental illness means he lacks the mental capacity to make a rational choice. He therefore cannot acquire a domicile of choice.</p>
+    </div>
+  </div>
+
+  <h4>Tricky categories — lawful presence</h4>
+  <ul>
+    <li><strong>Illegal alien / prohibited immigrant</strong> → cannot acquire (not lawfully present)</li>
+    <li><strong>Refugee</strong> → can acquire if lawfully present</li>
+    <li><strong>Fugitive from justice</strong> → debatable; generally cannot if hiding</li>
+    <li><strong>Soldier / diplomat / public servant</strong> → generally retains previous domicile</li>
+  </ul>
+
+  <div class="case" id="case-nefler">
+    <h5>Nefler v Nefler</h5>
+    <span class="citation">1906 ORC 7</span>
+    <div class="case-row"><strong>Facts</strong><span>Whether a life prisoner could acquire a domicile of choice at the place of imprisonment.</span></div>
+    <div class="case-row"><strong>Held</strong><span>A prisoner imprisoned for life was held to have <strong>automatically acquired</strong> a domicile of choice in the prison.</span></div>
+    <div class="case-pin"><strong>Why it matters:</strong> The one case on prisoner domicile — permanent imprisonment can satisfy the intention requirement.</div>
+  </div>
+
+  <h3>Assigned Domicile — Section 2 of the Domicile Act</h3>
+  <div class="keybox">
+    <p>Section 2(1): Anyone who cannot acquire a domicile of choice is domiciled at the place with which they are <strong>most closely connected</strong>.</p>
+    <p>Section 2(2): <strong>Rebuttable presumption</strong> — if a minor normally lives with one or both parents, the parental home is the minor's domicile.</p>
+    <p>Section 2(3): "Parents" includes adoptive parents and parents not married to each other.</p>
+  </div>
+
+  <div class="activity">
+    <div class="activity-title">Activity 7.4 — Ntombi's domicile</div>
+    <p>The Mnguni family has relocated from Springs to Mafikeng. Ntombi is 9 years old. Where is she domiciled?</p>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <p><strong>Mafikeng.</strong> As a minor, Ntombi cannot acquire a domicile of choice. Section 2(1) of the Domicile Act assigns her a domicile at the place with which she is most closely connected. Section 2(2) creates a rebuttable presumption: if a minor normally has their home with one or both parents, the parental home is the minor's domicile. Her parents are now in Mafikeng → her assigned domicile follows the parental home.</p>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="activity-title">Activity 7.5 — Full Mnguni family table</div>
+    <p>Summarise the domiciles of: (1) Ntombi while in Springs; (2) Jabulani after renting in Pretoria; (3) Bongani and Ntombi after relocation to Mafikeng.</p>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <table class="compare">
+        <tr><th>Person</th><th>Domicile</th><th>Why</th></tr>
+        <tr><td>Ntombi (in Springs)</td><td>Springs</td><td>Minor → assigned domicile = parental home (s 2(1), 2(2))</td></tr>
+        <tr><td>Jabulani (renting in Pretoria)</td><td>Pretoria</td><td>Major + mental capacity → has acquired domicile of choice: lawful presence + intention to settle indefinitely (s 1(1), 1(2))</td></tr>
+        <tr><td>Bongani (Mafikeng)</td><td>Mafikeng</td><td>Mentally ill → cannot acquire domicile of choice. Assigned domicile = place of closest connection = with family in Mafikeng (s 2(1))</td></tr>
+        <tr><td>Ntombi (Mafikeng)</td><td>Mafikeng</td><td>Minor → assigned domicile = parental home, now in Mafikeng</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <h3>Domicile of a Mentally Incapacitated Person</h3>
+  <p>Previously, courts said they retained the domicile they had when they became incapacitated. Under the Domicile Act, they now have an <strong>assigned domicile</strong> — the place of closest connection.</p>
+
+  <div class="activity">
+    <div class="activity-title">Test Yourself — Domicile scenarios</div>
+    <ol>
+      <li>Andrew murders his brother in Cape Town and flees to Nigeria, never intending to return. Is he domiciled in SA or Nigeria?</li>
+      <li>Busi recently moved to Durban with the intention of staying permanently. Last week her mother in Johannesburg was diagnosed with terminal cancer — Busi returned temporarily to care for her, intending to return to Durban. Where is Busi domiciled?</li>
+      <li>Can a prohibited immigrant acquire a domicile of choice in the country where they are unlawfully present?</li>
+    </ol>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <ol>
+        <li>Andrew has <strong>not</strong> lost his SA domicile (principle: no-one loses a domicile until acquiring a new one). He is unlikely to have acquired a Nigerian domicile of choice because, as a fugitive from justice, his presence there may not be lawful and his fleeing doesn't clearly show intention to settle indefinitely. Most likely: still domiciled in <strong>Cape Town, SA</strong> (until proved otherwise).</li>
+        <li><strong>Durban.</strong> Once established, a domicile of choice is not lost by temporary absence. Her intention is still to reside in Durban indefinitely.</li>
+        <li><strong>No.</strong> Lawful presence is a requirement. Unlawful presence cannot ground a domicile of choice.</li>
+      </ol>
+    </div>
+  </div>
+
+  <a href="#top" class="back-top">↑ Back to top</a>
+</section>
+
+<!-- ============================================================= -->
+<!-- UNIT 8 -->
+<!-- ============================================================= -->
+<section class="unit" id="u8">
+  <div class="unit-label">Unit 08</div>
+  <h2>Children Born of Unmarried Parents</h2>
+
+  <p class="intro-para">This unit is about proving who a child's father is. The mother is obvious (she gave birth). The father — not always. The law uses presumptions.</p>
+
+  <h3>Definitions</h3>
+  <dl class="terms">
+    <dt>Child born of married parents</dt>
+    <dd>A child whose parents were married to each other at the time of conception, at birth, or at any intervening time — <em>or</em> whose parents entered into a putative marriage.</dd>
+    <dt>Child born of unmarried parents</dt>
+    <dd>Any child not born of married parents. Old terms like "illegitimate" or "extra-marital" are avoided due to stigma.</dd>
+  </dl>
+
+  <div class="activity">
+    <div class="activity-title">Activity 8.1 — Defining the terms</div>
+    <ol>
+      <li>What is a "child born of married parents"?</li>
+      <li>What is a "child born of unmarried parents"?</li>
+    </ol>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <ol>
+        <li>A child whose parents were legally married to each other at the time of conception, birth, or any intervening time. "Marriage" here includes civil, customary and religious marriages, and civil unions.</li>
+        <li>A child whose parents were not parties to a valid marriage or civil union with each other at the time of conception, birth, or any intervening time.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="activity-title">Activity 8.2 — Nancy and Nsizwa</div>
+    <p>Nancy and Nsizwa finalised their divorce in March 2018. In April, Nancy discovers she is 5 months pregnant. In August she gives birth to a daughter, Owami. Nsizwa denies paternity — he says he didn't have sex with Nancy for 10 months before the divorce. Is Owami a child born of married or unmarried parents?</p>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <p><strong>Child born of married parents.</strong> Owami was conceived while her parents were still legally married. The status of the child is determined by whether the parents were married at any time from conception through birth.</p>
+    </div>
+  </div>
+
+  <h3>Categories of Children Born of Unmarried Parents</h3>
+  <ul>
+    <li><strong>Natural child</strong> — parents could have legally married but didn't.</li>
+    <li><strong>Adulterine child</strong> — conceived while one parent was married to someone else.</li>
+    <li><strong>Incestuous child</strong> — parents within prohibited degrees of blood/affinity.</li>
+  </ul>
+
+  <h3>Artificial Fertilisation</h3>
+  <p>Under the Children's Act, a child born through artificial fertilisation:</p>
+  <ul>
+    <li>Is the child of the woman who gives birth (and her spouse/partner if she's married/in a civil union and they consented).</li>
+    <li>The <strong>gamete donor</strong> has no parental responsibilities or rights.</li>
+    <li>Same-sex couples are treated equally.</li>
+  </ul>
+
+  <h3>Proof of Parentage — Presumptions of Paternity</h3>
+  <div class="diagram">
+    <div class="branch">
+      <div class="branch-parent">IS THE MOTHER MARRIED / IN A CIVIL UNION?</div>
+      <div class="branch-children">
+        <div class="branch-child"><strong>YES — she is married</strong>Husband is presumed father. Maxim: <em>pater est quem nuptiae demonstrant</em> ("the father is the one the marriage points to"). Rebuttable on <strong>balance of probabilities</strong>.</div>
+        <div class="branch-child"><strong>NO — she is not married</strong>Section 36 of the Children's Act: any man who had sex with the mother at any time the child could have been conceived is presumed the father. Rebuttable only by evidence raising <strong>reasonable doubt</strong>.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="activity-title">Activity 8.3 — Maintenance for Owami</div>
+    <p>Back to the Nancy/Nsizwa scenario. Who is responsible for maintaining Owami?</p>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <p><strong>Nsizwa</strong>, initially. The presumption <em>pater est quem nuptiae demonstrant</em> applies — when a validly married woman gives birth, her husband (even ex-husband, given the timing of conception) is presumed the father. Owami is treated as a child born of married parents. However, this presumption is <strong>rebuttable</strong>: Nsizwa can prove he is not the father by, e.g., proving no sexual contact at the time of conception (as he alleges), impotence, sterility, or through DNA testing. If he succeeds, he is not liable for maintenance.</p>
+    </div>
+  </div>
+
+  <div class="plain">
+    <span class="tag">Constitutional Critique</span>
+    Heaton argues the heavier burden ("reasonable doubt") for unmarried men is unconstitutional — it discriminates on grounds of marital status and birth (s 9 Constitution).
+  </div>
+
+  <div class="case" id="case-fvl">
+    <h5>F v L</h5>
+    <span class="citation">1987 (4) SA 525 (W)</span>
+    <div class="case-row"><strong>Facts</strong><span>A man applied for an order declaring him the father of a child, while the mother was married to another man.</span></div>
+    <div class="case-row"><strong>Held</strong><span>Application dismissed. Harms J held the <em>pater est quem nuptiae demonstrant</em> presumption applied — plus the mother's husband had admitted having sex during the conception period. The court also considered it was not in the child's best interests to be declared born of unmarried parents.</span></div>
+    <div class="case-pin"><strong>Why it matters:</strong> Illustrates courts' historically conservative approach to disturbing the status of a child born to a married woman.</div>
+  </div>
+
+  <h3>Corroboration of the Mother's Evidence</h3>
+  <p>Historically, courts required corroboration of the mother's evidence about sexual intercourse. This rule was <strong>rejected</strong> by the Appellate Division. Her evidence alone can now suffice.</p>
+
+  <h3>Factors to Rebut a Presumption of Paternity</h3>
+  <table class="compare">
+    <tr><th>Factor</th><th>Can it rebut?</th></tr>
+    <tr><td>Absence of sexual intercourse</td><td>✅ Yes, if proved</td></tr>
+    <tr><td>Gestation period</td><td>✅ Case-by-case, with medical evidence. No fixed period in SA law.</td></tr>
+    <tr><td>Sterility / impotence</td><td>✅ Yes, if proved</td></tr>
+    <tr><td><em>Exceptio plurium concubentium</em> (other men also had sex with mother)</td><td>⚠️ Not a complete defence. Must combine with other evidence.</td></tr>
+    <tr><td>Physical features (child doesn't look like him)</td><td>❌ Generally not enough</td></tr>
+    <tr><td>Contraceptives used</td><td>❌ Not sufficient</td></tr>
+    <tr><td>Blood / DNA tests</td><td>✅ Strongest evidence</td></tr>
+  </table>
+
+  <div class="case" id="case-ym">
+    <h5>YM v LB ★ PRESCRIBED CASE</h5>
+    <span class="citation">2010 (6) SA 338 (SCA)</span>
+    <div class="case-row"><strong>Issue</strong><span>Whether the High Court has power to order a child to submit to DNA testing in a paternity dispute, and in what circumstances.</span></div>
+    <div class="case-row"><strong>Held</strong><span>The High Court, as <strong>upper guardian of all minors</strong>, has the <strong>inherent power</strong> to order DNA tests in paternity disputes — <strong>if it is in the child's best interests</strong>.</span></div>
+    <div class="case-row"><strong>Reasoning</strong><span>The court must do a "close and individualised examination" of the child's real-life situation. It noted (obiter) that it is not always in a child's interests to know the truth — each case is weighed on its merits.</span></div>
+    <div class="case-row"><strong>Note</strong><span>The SCA did NOT resolve whether a court can compel an unwilling <em>adult</em> to submit to DNA testing — that issue remains unsettled.</span></div>
+    <div class="case-pin"><strong>Why it matters (exam critical):</strong> Settled SA law on ordering minors to undergo DNA tests. Apply the <strong>best-interests-of-the-child</strong> standard.</div>
+  </div>
+
+  <div class="activity">
+    <div class="activity-title">Activity 8.5 — Forcing DNA tests</div>
+    <p>After Owami's birth, Nsizwa wants Nancy to consent to DNA testing. Nancy refuses. Nsizwa says he'll go to court. What is the court's approach?</p>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <p>Per <em>YM v LB</em> 2010 (6) SA 338 (SCA), the High Court as <strong>upper guardian of minors</strong> has inherent power to order such tests — <strong>if in the child's best interests</strong>. Nsizwa would succeed if the court finds the DNA test is in Owami's best interests (e.g. to establish identity, paternity, access to maintenance and inheritance). Courts generally consider clarity about parentage to be in the child's interests, so the application would likely succeed.</p>
+    </div>
+  </div>
+
+  <a href="#top" class="back-top">↑ Back to top</a>
+</section>
+
+<!-- ============================================================= -->
+<!-- UNIT 9 -->
+<!-- ============================================================= -->
+<section class="unit" id="u9">
+  <div class="unit-label">Unit 09</div>
+  <h2>Status & Change of Status of Children Born of Unmarried Parents</h2>
+
+  <p class="intro-para">Before 2007, unmarried fathers had very few rights. The Children's Act 38 of 2005 changed everything — and it's crucial to know the rules.</p>
+
+  <h3>Parental Responsibilities and Rights — Four Components</h3>
+  <div class="diagram">
+    <div class="branch">
+      <div class="branch-parent">PARENTAL RESPONSIBILITIES & RIGHTS</div>
+      <div class="branch-children">
+        <div class="branch-child"><strong>Care</strong>Place to live, well-being, guiding behaviour, protecting rights, securing best interests.</div>
+        <div class="branch-child"><strong>Contact</strong>Personal relationship — visits, calls, messaging.</div>
+        <div class="branch-child"><strong>Guardianship</strong>Administering property, legal representation, giving required consent.</div>
+        <div class="branch-child"><strong>Maintenance</strong>Financial support, shared between parents by means.</div>
+      </div>
+    </div>
+  </div>
+
+  <h3>The Mother</h3>
+  <p>Section 19 Children's Act: every biological mother <strong>automatically acquires full parental responsibilities and rights</strong> at birth — married or not. If she's an unmarried minor, guardianship vests in <em>her</em> guardian; she still has care.</p>
+
+  <h3>The Unmarried Father — Four Routes to Parental Responsibilities & Rights</h3>
+  <div class="diagram">
+    <div class="flow">
+      <div class="flow-node soft"><strong>Route 1 — s 21(1): Automatic</strong></div>
+      <div class="flow-node">EITHER (a) was living with the mother in a permanent life partnership when the child was born, OR (b) regardless of cohabitation: (i) consents / applies / pays damages to be identified as father, AND (ii) contributes / tries in good faith to contribute to child's upbringing AND maintenance for a reasonable period.</div>
+      <div class="flow-arrow">or</div>
+      <div class="flow-node soft"><strong>Route 2 — s 22: Agreement</strong></div>
+      <div class="flow-node">Parental responsibilities and rights agreement with mother. Must be registered with Family Advocate or made an order of court.</div>
+      <div class="flow-arrow">or</div>
+      <div class="flow-node soft"><strong>Route 3 — s 23: Court Order</strong></div>
+      <div class="flow-node">Any interested person applies to High Court / Children's Court / Divorce Court. Based on best interests.</div>
+      <div class="flow-arrow">or</div>
+      <div class="flow-node soft"><strong>Route 4 — Adoption</strong></div>
+      <div class="flow-node">An unmarried father can adopt his own child.</div>
+    </div>
+  </div>
+
+  <div class="case" id="case-klvc">
+    <h5>KLVC v SDI ★ PRESCRIBED CASE</h5>
+    <span class="citation">[2015] 1 All SA 532 (SCA)</span>
+    <div class="case-row"><strong>Issue</strong><span>Interpretation of section 21(1)(b) — particularly what "reasonable period" and "good faith contribution" mean.</span></div>
+    <div class="case-row"><strong>Held — "reasonable period"</strong><span>Depends on the facts of each case, especially the child's age and the parties' circumstances. It's an "elastic concept" that requires a value judgment based on a wide range of considerations.</span></div>
+    <div class="case-row"><strong>Held — "contribution"</strong><span>Does <strong>NOT</strong> mean maintenance as formally defined in the Maintenance Act 99 of 1998. <strong>Any contribution</strong> to the child's maintenance is sufficient.</span></div>
+    <div class="case-row"><strong>Held — automatic acquisition</strong><span>Section 21 is intended to confer <em>automatic</em> acquisition of parental responsibilities and rights if the father meets the requirements.</span></div>
+    <div class="case-pin"><strong>Why it matters (exam critical):</strong> Leading SCA authority on how to apply s 21(1) of the Children's Act. Memorise the two headline holdings.</div>
+  </div>
+
+  <div class="activity">
+    <div class="activity-title">Activity 9.1 — KLVC v SDI</div>
+    <ol>
+      <li>According to the SCA, which factors determine what constitutes "a reasonable period of time" in s 21(1)(b)?</li>
+      <li>How did the SCA interpret the "maintenance contribution" in s 21(1)(b)?</li>
+    </ol>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <ol>
+        <li>The court considers the <strong>facts, exercises a value judgment, and looks at a wide range of circumstances</strong> — particularly the child's age and the parties' circumstances and actions (paras [13]–[14] of the judgment).</li>
+        <li>The maintenance contribution does <strong>not</strong> require formal maintenance as defined in the Maintenance Act 99 of 1998. <strong>Any contribution</strong> to the child's maintenance is enough (paras [29]–[34]).</li>
+      </ol>
+    </div>
+  </div>
+
+  <h3>Succession</h3>
+  <table class="compare">
+    <tr><th></th><th>Intestate succession</th><th>Testate succession</th></tr>
+    <tr><td>Child born of unmarried parents</td><td>Inherits from <strong>both parents</strong> and all blood relations — no discrimination.</td><td>Inherits per the will.</td></tr>
+  </table>
+
+  <h3>Maintenance</h3>
+  <p>Both parents must support the child. If a parent dies, their <strong>estate</strong> remains liable. If neither can, duty falls on <strong>grandparents</strong>.</p>
+
+  <div class="case" id="case-petersen">
+    <h5>Petersen v Maintenance Officer, Simon's Town</h5>
+    <span class="citation">[2004] 1 All SA 117 (C); 2004 (2) BCLR 205 (C)</span>
+    <div class="case-row"><strong>Facts</strong><span>Historically (per <em>Motan v Joosub</em> 1930 AD 61), only the <strong>maternal</strong> grandparents were liable to support a child born of unmarried parents. A grandchild challenged this.</span></div>
+    <div class="case-row"><strong>Held</strong><span>The Cape Provincial Division declared the rule <strong>unconstitutional</strong>. It unjustifiably violated the child's right not to be subject to unfair discrimination on the ground of birth (s 9 Constitution), right to dignity (s 10), and failed to afford paramountcy to the child's best interests (s 28(2)).</span></div>
+    <div class="case-pin"><strong>Why it matters:</strong> Paternal grandparents are also liable to support. The rule discriminating against children of unmarried parents is gone.</div>
+  </div>
+
+  <h3>Changing the Status of a Child Born of Unmarried Parents</h3>
+  <ol>
+    <li><strong>Subsequent marriage or civil union</strong> of the parents → child automatically becomes born of married parents.</li>
+    <li><strong>Adoption</strong> — by the father alone, mother + new spouse, or unrelated adoptive parents.</li>
+  </ol>
+
+  <div class="activity">
+    <div class="activity-title">Activity 9.2 — Changing status</div>
+    <p>List the ways in which the status of children born of unmarried parents may be changed.</p>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <ol>
+        <li>By the <strong>subsequent marriage or civil union</strong> of the child's parents.</li>
+        <li>By <strong>adoption</strong>.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="activity-title">Problem-type question — Mark and Lisa</div>
+    <p>Mark and Lisa (both unmarried) have a child, Zoë.</p>
+    <ol>
+      <li>Mark wants regular contact with Zoë. Advise him.</li>
+      <li>Lisa is struggling financially. Can she claim maintenance from Mark?</li>
+    </ol>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <ol>
+        <li>Mark must either: (a) qualify automatically under s 21(1) — if he was living with Lisa in a permanent life partnership when Zoë was born, OR he consents/pays damages and contributes in good faith to Zoë's upbringing AND maintenance for a reasonable period (see <em>KLVC v SDI</em>); OR (b) enter a s 22 parental responsibilities and rights agreement with Lisa; OR (c) apply to court under s 23. Under any route, contact is secured once parental responsibilities and rights are established.</li>
+        <li><strong>Yes.</strong> Both biological parents owe Zoë a duty of maintenance, regardless of whether married or unmarried, apportioned according to each parent's means (Maintenance Act). Lisa can apply to the Maintenance Court for an order.</li>
+      </ol>
+    </div>
+  </div>
+
+  <a href="#top" class="back-top">↑ Back to top</a>
+</section>
+
+<!-- ============================================================= -->
+<!-- UNIT 10 -->
+<!-- ============================================================= -->
+<section class="unit" id="u10">
+  <div class="unit-label">Unit 10</div>
+  <h2>Minority — Introduction</h2>
+
+  <p class="intro-para">Age changes everything in law. A person under 18 is a <em>minor</em>, and the law restricts their capacities to protect them. This unit sets the scene.</p>
+
+  <h3>Why Minors Have Limited Capacity</h3>
+  <p>Juristic acts depend on an expression of <strong>will</strong>. Valid exercise of will requires understanding:</p>
+  <ul>
+    <li>The <strong>nature</strong> of the act</li>
+    <li>The <strong>purport (meaning)</strong> of the act</li>
+    <li>The <strong>consequences</strong> of the act</li>
+  </ul>
+  <p>The law assumes persons under 18 don't yet have sufficient judgement — so it limits their capacity for their own <strong>protection</strong>.</p>
+
+  <div class="activity">
+    <div class="activity-title">Activity 10.1 — Requirements for capacity to act</div>
+    <p>Fill in: "Before the law confers capacity to act, a person should be able to comprehend the ________, ________ and ________ of his or her acts. The ________ of ________ of persons under 18 is not fully developed, so their capacity to act is limited."</p>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <p>"<strong>nature, purport and consequences</strong>" … "the <strong>powers of judgement</strong> of persons under 18 is not fully developed, so their capacity to act is limited." (Heaton p 79.)</p>
+    </div>
+  </div>
+
+  <div class="diagram">
+    <div class="age-line">
+      <div class="age-track">
+        <div class="age-marker" style="left: 0%;"></div>
+        <div class="age-label age-above" style="left: 0%;">Birth</div>
+        <div class="age-label age-below" style="left: 0%;">0</div>
+
+        <div class="age-marker" style="left: 38%;"></div>
+        <div class="age-label age-above" style="left: 38%;">End of<br>infancy</div>
+        <div class="age-label age-below" style="left: 38%;">7</div>
+
+        <div class="age-marker" style="left: 100%;"></div>
+        <div class="age-label age-above" style="left: 100%;">Majority</div>
+        <div class="age-label age-below" style="left: 100%;">18</div>
+      </div>
+    </div>
+    <p class="caption"><strong>0–7:</strong> Infans — no capacity to act · <strong>7–18:</strong> Minor — limited capacity to act · <strong>18+:</strong> Major — full capacity to act</p>
+  </div>
+
+  <div class="plain">
+    <span class="tag">Terminology Trap</span>
+    Heaton uses "minor" narrowly for ages 7–18. <strong>But technically, "minor" means anyone under 18 (including infans).</strong> For exams, define "minor" as <em>someone under the age of majority</em>. The Children's Act also defines a child as a person under 18.
+  </div>
+
+  <h3>Children's Rights — Section 28 of the Constitution</h3>
+  <p>Every child has special rights including:</p>
+  <ul>
+    <li>Name and nationality from birth</li>
+    <li>Family/parental care or alternative care</li>
+    <li>Basic nutrition, shelter, health care, social services</li>
+    <li>Protection from maltreatment, abuse, neglect</li>
+    <li>Protection from exploitative labour</li>
+    <li>Detention only as a last resort</li>
+    <li>Best interests of <strong>paramount importance</strong> in every matter concerning the child</li>
+  </ul>
+
+  <h3>Children's Act 38 of 2005</h3>
+  <p>Supplements the constitutional rights with additional rights (participation in decisions, access to health information, protection from virginity testing, child marriage, genital mutilation, etc.).</p>
+
+  <h3>International Instruments</h3>
+  <ul>
+    <li><strong>UN Convention on the Rights of the Child</strong> (ratified 1995)</li>
+    <li><strong>African Charter on the Rights and Welfare of the Child</strong> (ratified 2000)</li>
+  </ul>
+
+  <h3>Fundamental Concepts You Must Know</h3>
+  <dl class="terms">
+    <dt>Agreement</dt><dd>A meeting of minds — parties intending to agree on something.</dd>
+    <dt>Contract</dt><dd>An agreement intended to create legal obligations, enforceable in law.</dd>
+    <dt>Contractual liability</dt><dd>Being legally bound by a contract; you must perform or face legal action.</dd>
+    <dt>Obligation</dt><dd>A legal bond — one person (debtor) owes performance to another (creditor).</dd>
+    <dt>Performance</dt><dd>What the contract requires (paying, delivering, rendering a service).</dd>
+    <dt>Civil obligation</dt><dd>Enforceable in court.</dd>
+    <dt>Natural obligation</dt><dd>Not enforceable in court; but if voluntarily performed, the performance cannot be reclaimed.</dd>
+    <dt>Unilateral contract</dt><dd>Only one party has duties (e.g. donation).</dd>
+    <dt>Multilateral contract</dt><dd>More than one party has duties (may be one-sided or mutual).</dd>
+    <dt>Reciprocal contract</dt><dd>Both parties have linked duties — each performance is the price for the other (e.g. sale).</dd>
+  </dl>
+
+  <div class="example">
+    Chris buys a bicycle for R200 from a shop. This is a <strong>reciprocal contract</strong>. Chris is <em>debtor</em> for R200 and <em>creditor</em> for the bicycle. The shop is <em>debtor</em> for the bicycle and <em>creditor</em> for R200.
+  </div>
+
+  <div class="activity">
+    <div class="activity-title">Test Yourself — Minority intro</div>
+    <ol>
+      <li>Do restrictions on a minor's capacity amount to unfair discrimination on the ground of age (s 9 Constitution)?</li>
+      <li>Discuss s 28 of the Constitution protecting children's rights.</li>
+      <li>Define each of: agreement, contract, obligation, performance, civil vs natural obligation, unilateral vs multilateral vs reciprocal contract.</li>
+    </ol>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <ol>
+        <li><strong>No.</strong> The limitations are <em>protective</em>, aimed at the child's best interests. They are reasonable and justifiable under s 36 of the Constitution. The intention is to protect minors from binding themselves to obligations they may not fully understand.</li>
+        <li>Key points of s 28: child's right to a name and nationality; family/parental/alternative care; basic nutrition, shelter, health, social services; protection from maltreatment, neglect, abuse, degradation; protection from exploitative labour; detention as last resort, separate from adults; legal representation at state expense in civil proceedings affecting them; not to be used in armed conflict; <strong>best interests paramount in every matter concerning the child (s 28(2))</strong>.</li>
+        <li>See definitions above — you need to be able to define each in your own words for the exam.</li>
+      </ol>
+    </div>
+  </div>
+
+  <a href="#top" class="back-top">↑ Back to top</a>
+</section>
+
+<!-- ============================================================= -->
+<!-- UNIT 11 -->
+<!-- ============================================================= -->
+<section class="unit" id="u11">
+  <div class="unit-label">Unit 11</div>
+  <h2>The Legal Status of an <em>Infans</em></h2>
+
+  <p class="intro-para">An <em>infans</em> is a child under 7. Law treats them as incapable of legal acts altogether.</p>
+
+  <h3>Capacity to Act — ZERO</h3>
+  <div class="keybox">
+    <p><strong>An infans has NO capacity to act.</strong> They cannot conclude any juristic act — not even one that benefits them. The guardian must act <em>for</em> them and <em>on their behalf</em>.</p>
+  </div>
+
+  <div class="activity">
+    <div class="activity-title">Activity 11.1 — Thandi, age 6</div>
+    <p>For each contract, decide validity with reasons:</p>
+    <ol>
+      <li>Thandi (6) buys a tricycle herself, without assistance.</li>
+      <li>Thandi, with her father's assistance, buys a tricycle.</li>
+      <li>Thandi's father, on her behalf, buys a tricycle.</li>
+      <li>Thandi's uncle gives her a tricycle. She accepts, without assistance.</li>
+    </ol>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <ol>
+        <li><strong>Invalid.</strong> An infans has NO capacity to act — the contract is a nullity.</li>
+        <li><strong>Invalid.</strong> Even with assistance, an infans cannot conclude a juristic act. Assistance is not enough.</li>
+        <li><strong>Valid.</strong> The <em>only</em> route: guardian acts <em>for</em> the infans.</li>
+        <li><strong>Invalid.</strong> An infans cannot enter a contract even if it confers only rights — so cannot personally accept a donation. The court, Master of the High Court, or guardian must accept on her behalf.</li>
+      </ol>
+      <p>(Heaton pp 84–85.)</p>
+    </div>
+  </div>
+
+  <h3>Capacity to Litigate — ZERO</h3>
+  <p>An infans is <strong>incapable of being a party</strong> to a lawsuit, even with the guardian's assistance. The guardian must sue or defend <em>on behalf</em> of the infans.</p>
+
+  <h3>Delictual and Criminal Liability</h3>
+  <div class="plain">
+    <span class="tag">Accountability</span>
+    To be liable for a delict or crime, you need to be <strong>accountable</strong> — able to tell right from wrong. An infans cannot be at fault.
+  </div>
+  <ul>
+    <li><strong>Criminal liability:</strong> Child Justice Act 75 of 2008 — a child under 10 has no criminal capacity and cannot be prosecuted.</li>
+    <li><strong>Delictual liability based on fault:</strong> None.</li>
+    <li><strong>Delictual liability without fault:</strong> Possible — e.g. <em>actio de pauperie</em> (owner of a domestic animal liable for damage it causes), or vicarious liability.</li>
+  </ul>
+  <p>The guardian may be personally liable if they used the infans as an instrument or negligently failed to prevent harm.</p>
+
+  <div class="activity">
+    <div class="activity-title">Test Yourself — Infans</div>
+    <ol>
+      <li>Define "infans" and "minor".</li>
+      <li>Explain the capacity to act of the infans.</li>
+      <li>Explain the capacity to litigate of the infans.</li>
+      <li>Briefly explain delictual and criminal liability of the infans.</li>
+    </ol>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <ol>
+        <li><strong>Infans</strong>: a person under 7. <strong>Minor</strong>: a person under 18 (the age of majority).</li>
+        <li><strong>No capacity to act.</strong> Infans cannot conclude any juristic act — not even one that only benefits them. The guardian must act on their behalf.</li>
+        <li><strong>No capacity to litigate.</strong> The infans cannot be party to a lawsuit; the guardian litigates on their behalf.</li>
+        <li><strong>Generally none.</strong> Child Justice Act 75 of 2008: no criminal capacity under 10. No delictual liability based on fault (infans is unaccountable). But liability is possible where fault is not required (<em>actio de pauperie</em>, vicarious liability).</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    <span class="tag">One-Line Summary</span>
+    "Under 7 = law ignores them — guardian must do everything for them."
+  </div>
+
+  <a href="#top" class="back-top">↑ Back to top</a>
+</section>
+
+<!-- ============================================================= -->
+<!-- UNIT 12 -->
+<!-- ============================================================= -->
+<section class="unit" id="u12">
+  <div class="unit-label">Unit 12</div>
+  <h2>The Legal Status of a Minor — General Principles</h2>
+
+  <p class="intro-para">Between 7 and 18, a child is a minor with <em>limited</em> capacity to act. Old enough to think — not yet, in law's view, old enough to be trusted alone with binding agreements.</p>
+
+  <h3>The Golden Rule</h3>
+  <div class="keybox">
+    <p>A minor (7–18) <strong>cannot incur contractual liability</strong> unless they are <strong>assisted by their guardian</strong> when the contract is concluded.</p>
+  </div>
+
+  <h3>Three Types of Contracts a Minor Might Enter</h3>
+  <div class="diagram">
+    <div class="branch">
+      <div class="branch-parent">A MINOR'S CONTRACT</div>
+      <div class="branch-children">
+        <div class="branch-child"><strong>1. Pure benefit (rights only, no duties)</strong>✅ <span style="color: green;">VALID WITHOUT ASSISTANCE</span>Example: accepting a donation, being released from a debt.</div>
+        <div class="branch-child"><strong>2. Mixed (rights AND duties)</strong>⚠️ <span style="color: orange;">LIMPING CONTRACT</span> without assistance — only the other party is bound; the minor is not (unless the guardian ratifies).</div>
+        <div class="branch-child"><strong>3. Pure burden (only duties)</strong>❌ <span style="color: red;">INVALID</span> without assistance — minor cannot only assume duties.</div>
+      </div>
+    </div>
+  </div>
+
+  <h3>The "Limping" Unassisted Contract</h3>
+  <p>When a minor enters an unassisted contract imposing duties:</p>
+  <ol>
+    <li>The <strong>other party is fully bound</strong>. They can't escape by pointing to the minor's minority.</li>
+    <li>The <strong>minor is NOT bound</strong> — at least not yet.</li>
+    <li>The <strong>guardian</strong> decides:
+      <ul>
+        <li><strong>Ratify</strong> (approve) → contract becomes fully binding on the minor.</li>
+        <li><strong>Reject</strong> → the other party loses rights against the minor.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <div class="example">
+    <strong>16-year-old Sipho buys a laptop on credit without telling his mother.</strong><br>
+    • The shop is fully bound — must deliver.<br>
+    • Sipho is not bound — can refuse to pay.<br>
+    • Sipho's mother (guardian) decides: ratify (Sipho must pay) or reject (deal collapses; shop gets laptop back).
+  </div>
+
+  <h3>The <em>Exceptio Non Adimpleti Contractus</em></h3>
+  <p>In reciprocal contracts, if one party hasn't performed, the other can refuse to perform until they do. For a minor, this means the minor can demand performance from the other party without being obliged to perform themselves (unless the guardian ratifies).</p>
+
+  <h3>Forms Guardian's Assistance Can Take</h3>
+  <ol>
+    <li><strong>Prior consent</strong> — express or implied, before the contract.</li>
+    <li><strong>Present at conclusion</strong> — guardian consents on the spot.</li>
+    <li><strong>Guardian concludes on minor's behalf</strong> — as representative.</li>
+    <li><strong>Ratification after the fact</strong> — guardian approves afterwards.</li>
+    <li><strong>Court / Master consent</strong> — for transactions above statutory thresholds (e.g. minor's immovable property).</li>
+  </ol>
+
+  <h3>Impact of the Consumer Protection Act (CPA)</h3>
+  <p>Heaton notes that the CPA may cut across the traditional rules — an unassisted minor's consumer contract may be void (not merely limping). This area is developing; the CPA can invalidate consumer contracts with unassisted minors altogether.</p>
+
+  <div class="activity">
+    <div class="activity-title">Test Yourself — Minor's contractual capacity</div>
+    <ol>
+      <li>What is the general rule about a minor's contractual capacity?</li>
+      <li>What happens when a minor enters a contract without assistance that imposes duties on them?</li>
+      <li>List the forms the guardian's assistance can take.</li>
+    </ol>
+    <div class="feedback">
+      <span class="tag">Feedback</span>
+      <ol>
+        <li>Minors (7–18) cannot incur contractual liability unless assisted by their guardian when concluding the contract. A contract imposing only duties on the minor without assistance is invalid; a contract giving the minor only rights (e.g. donation) is valid without assistance.</li>
+        <li>The contract "limps": the other party is bound; the minor is not. The guardian can then (a) ratify it (making it fully binding on the minor) or (b) reject it (the other party loses their rights against the minor). The other party cannot rely on the minor's minority to escape their own duties.</li>
+        <li>(a) Prior consent; (b) presence at conclusion; (c) guardian concludes on the minor's behalf; (d) ratification after the fact; (e) court or Master of the High Court consent (for certain transactions).</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    <span class="tag">One-Line Summary</span>
+    "Under 18 means limited — guardian's green light turns a limping deal into a real one."
+  </div>
+
+  <a href="#top" class="back-top">↑ Back to top</a>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ UNIT 13 -->
+<section class="unit" id="u13">
+  <div class="unit-tag">LEARNING UNIT 13</div>
+  <h2 class="unit-title">The Minor's Contractual Capacity — Assistance by the Guardian, Ratification &amp; Statutory Exceptions</h2>
+ 
+  <p>You already know from Unit 12 that a minor who contracts <em>without</em> a guardian's assistance cannot be held contractually liable. This unit covers what happens when the minor <em>does</em> have assistance, or when the contract is ratified afterwards.</p>
+ 
+  <h3>13.1 Assistance by the Guardian</h3>
+  <p>A parent or guardian may assist a minor in contracting in <strong>three ways</strong>:</p>
+  <ol>
+    <li>The guardian enters into the contract <em>on behalf of</em> the minor (acting as the minor's representative).</li>
+    <li>The minor enters the contract <em>personally</em>, but <em>with the consent</em> of the guardian (express or tacit).</li>
+    <li>The guardian <em>ratifies</em> the contract after it has already been concluded (see 13.3 below).</li>
+  </ol>
+ 
+  <div class="concept-box">
+    <div class="banner">KEY PRINCIPLE</div>
+    <p>When a minor has proper guardian assistance, the minor is liable <em>ex contractu</em> (on the contract) <strong>as if he or she were a major</strong>. The assistance effectively removes the limitation on the minor's capacity for that contract.</p>
+  </div>
+ 
+  <h4>Contracts a Guardian CANNOT Conclude on the Minor's Behalf</h4>
+  <p>There are limits to what the guardian may do <em>for</em> the minor:</p>
+  <ul>
+    <li><strong>Contracts of a closely personal nature</strong> — e.g. an antenuptial contract (the minor themselves must enter it, though the guardian may consent).</li>
+    <li>Contracts that only come into operation when the minor reaches majority.</li>
+    <li>Heaton submits that a guardian cannot conclude a contract on a minor's behalf that contravenes the Basic Conditions of Employment Act 75 of 1997 (note: a minor under 15 may not work).</li>
+  </ul>
+ 
+  <h3>13.2 Liability of the Guardian</h3>
+  <p>In certain circumstances the guardian incurs <strong>personal contractual liability</strong> towards the other contracting party:</p>
+  <ol>
+    <li>If the minor acted as the <em>guardian's agent</em> (the guardian is the principal).</li>
+    <li>If the guardian <em>guaranteed</em> the minor's performance.</li>
+    <li>If the guardian bound himself or herself as <em>surety</em> for the minor.</li>
+  </ol>
+  <p><em>Note:</em> Liability on the basis of <em>negotiorum gestio</em> (unofficial management of another's affairs) is quasi-contractual, not contractual — parents who fail to support their children may be liable on this basis when a third party steps in to support the child.</p>
+ 
+  <h3>13.3 Ratification</h3>
+  <p>A minor's unassisted contract creates a <strong>natural obligation</strong> (not enforceable, but valid enough to be ratified). Ratification converts this into a <strong>civil obligation</strong> — fully enforceable against both parties with <em>retroactive effect</em>.</p>
+  <ul>
+    <li>Ratification may be <strong>express</strong> or <strong>tacit</strong> (inferred from conduct).</li>
+    <li>Upon reaching majority, the former minor can ratify their own unassisted contract.</li>
+    <li>A guardian <strong>cannot ratify</strong> a contract he or she could not validly have concluded on the minor's behalf at the time it was made.</li>
+  </ul>
+ 
+  <div class="case">
+    <div class="banner">§ CASE</div>
+    <p class="case h5">Edelstein v Edelstein 1952 (3) SA 1 (A)</p>
+    <div class="case-row">
+      <span class="case-row">Facts</span><span>A minor concluded an antenuptial contract without the required assistance. After the marriage, the minor (and the guardian) sought to ratify it.</span>
+      <span class="case-row">Issue</span><span>Can an antenuptial contract concluded without assistance be ratified after marriage?</span>
+      <span class="case-row">Held</span><span>No. An antenuptial contract concluded without assistance is <strong>void</strong> and cannot be ratified by either the minor or the guardian after the marriage has taken place.</span>
+      <span class="case-pin">Why it matters</span><span>This is an absolute rule for antenuptial contracts — once the marriage has occurred, there is no possibility of ratification. The case also confirmed that an unassisted minor's contract can never be valid.</span>
+    </div>
+  </div>
+ 
+  <h3>13.4 Statutory Exceptions</h3>
+  <p>Various Acts create exceptions to the rule that a minor cannot incur contractual liability without guardian assistance. Key examples include:</p>
+  <ul>
+    <li><strong>Mutual Banks Act</strong> — a minor may be a member of a mutual bank and conduct transactions.</li>
+    <li><strong>Banks Act</strong> — a minor may open and operate a bank account.</li>
+    <li>Various employment-related statutes (for minors 15 years and older).</li>
+  </ul>
+ 
+  <div class="activity-box">
+    <div class="banner">ACTIVITY 13.1 — WORKED EXAMPLE</div>
+    <p><strong>Sipho (17) buys a car without guardian assistance. His guardian later sees it and says "I'm glad you bought it." Does this amount to ratification?</strong></p>
+    <div class="feedback-box">
+      <div class="fb-label">▌ APPROACH</div>
+      <p>This could amount to <em>tacit ratification</em>. Courts look at all the circumstances to determine whether the guardian intended to ratify. An expression of approval could be sufficient if it clearly signals an intention to be bound. However, ratification requires a clear intention — ambiguous conduct may not suffice. The court would weigh the evidence.</p>
+    </div>
+  </div>
+ 
+  <div class="exam-alert">
+    <div class="banner">★ EXAM CRITICAL</div>
+    <p>Always distinguish between: (1) what the guardian <em>can</em> do on behalf of the minor, (2) what the minor can do <em>with guardian consent</em>, and (3) the retroactive effect of ratification. These distinctions frequently appear in problem-type questions.</p>
+  </div>
+</section>
+ 
+<hr class="unit-divider">
+ 
+<!-- ═══════════════════════════════════════════════════════ UNIT 14 -->
+<section class="unit" id="u14">
+  <div class="unit-tag">LEARNING UNIT 14</div>
+  <h2 class="unit-title">The Minor's Contractual Capacity — Misrepresentation</h2>
+ 
+  <p>What if a minor <em>lies</em> about being an adult in order to get an adult to contract with them? The adult has been deceived — but can they hold the minor liable? This unit explores the basis for liability in such cases.</p>
+ 
+  <h3>14.1 The Core Problem</h3>
+  <div class="concept-box">
+    <div class="banner">SCENARIO</div>
+    <p>A minor falsely represents that he/she is a major (or is emancipated, or has the necessary consent). An adult relies on this and enters into a contract. The minor then refuses to perform, relying on minority. The adult is left without a contractual remedy — but is there another remedy?</p>
+    <p><strong>The generally accepted view:</strong> Yes, the minor should be held liable. But on what basis — <em>contract</em> or <em>delict</em>?</p>
+  </div>
+ 
+  <h3>14.2 Argument 1 — Contractual Liability (REJECTED)</h3>
+  <p>Three arguments have been advanced in favour of holding the minor contractually liable:</p>
+ 
+  <h4>First Argument — Roman-Dutch Writers and Restitutio</h4>
+  <p>Roman-Dutch writers denied the remedy of <em>restitutio in integrum</em> to a fraudulent minor. The argument is: restitutio presupposes a binding contract, therefore there must be a binding contract. <strong>This is rejected</strong> — restitutio was applied in cases without a binding contract, so its denial does not imply a contract existed.</p>
+ 
+  <div class="case">
+    <div class="banner">§ CASE</div>
+    <p class="case h5">Louw v MJ &amp; H Trust (Pty) Ltd 1975 (4) SA 268 (T)</p>
+    <div class="case-row">
+      <span class="case-row">Facts</span><span>A minor misrepresented his age. The court denied him restitutio in integrum and also refused to let him recover the deposit he had already paid.</span>
+      <span class="case-row">Held</span><span>The court held the minor was not entitled to restitutio. As a result, he could not recover what he had paid.</span>
+      <span class="case-row">Criticism</span><span>Heaton and the study guide argue this is <em>wrong</em>: since the minor was not contractually bound, he should have been allowed to recover his deposit via a <em>condictio</em>. The court incorrectly treated him as both bound and not bound.</span>
+      <span class="case-pin">Why it matters</span><span>Illustrates the problem with using contractual reasoning in misrepresentation cases. The minor's proper remedy was to recover via condictio (money) or rei vindicatio (property), not restitutio.</span>
+    </div>
+  </div>
+ 
+  <h4>Second Argument — Estoppel</h4>
+  <p>Some writers argue the minor is bound by their misrepresentation through the rules of estoppel — they cannot later deny what they represented. <strong>Rejected</strong>: This would allow the minor to alter their capacity to act through misrepresentation, which is against the policy of protecting minors.</p>
+ 
+  <h4>Third Argument — Consumer Protection Act</h4>
+  <p>Section 39(2) of the Consumer Protection Act states the protection for minors (s 39(1)(b)) does not apply if the minor induced the supplier to believe they had full capacity. <strong>Rejected as a basis for contractual liability</strong> for the same policy reason — the minor would be altering their capacity by committing a misrepresentation.</p>
+ 
+  <div class="concept-box">
+    <div class="banner">CONCLUSION — Contractual Liability is UNACCEPTABLE</div>
+    <p>Holding a fraudulent minor contractually liable would mean the minor can supplement their limited capacity to act <em>through misrepresentation</em>. Capacity to act is limited by law to <em>protect the minor</em>. This protection cannot be circumvented by the minor's own fraud.</p>
+  </div>
+ 
+  <h3>14.3 Argument 2 — Delictual Liability (ACCEPTED)</h3>
+  <p>A minor who misrepresents their capacity commits a <strong>delict</strong> — a wrongful, culpable act causing damage to another. The study guide and Heaton support delictual liability because:</p>
+  <ul>
+    <li>It is independent of contractual liability — the contract remains unenforceable.</li>
+    <li>It does not allow the minor to expand their capacity to act.</li>
+    <li>The adult who was prejudiced is protected by having a delictual damages claim.</li>
+    <li>The minor's protection (limited capacity) is preserved.</li>
+  </ul>
+ 
+  <h3>14.4 Three Requirements for Delictual Liability</h3>
+  <div class="concept-box">
+    <div class="banner">REQUIREMENTS — MUST SATISFY ALL THREE</div>
+    <ol>
+      <li>The minor made a <strong>misrepresentation regarding majority or capacity to act</strong>.</li>
+      <li>The other party was <strong>induced to enter into the contract</strong> by the misrepresentation.</li>
+      <li>The other party <strong>suffered damage</strong> as a result.</li>
+    </ol>
+    <p style="margin-top:0.7rem;"><strong>Important principles:</strong></p>
+    <ul>
+      <li>The minor must be old enough to be <em>reasonably mistaken</em> for an adult.</li>
+      <li>The other party is <em>entitled to accept</em> the minor's statement of age.</li>
+      <li>The other party is <em>not obliged to investigate</em> unless they have good cause to believe they are dealing with a minor.</li>
+      <li>The <em>onus rests on the minor</em> to prove the other party was not misled.</li>
+    </ul>
+  </div>
+ 
+  <h3>14.5 Worked Examples (Activity 14.1)</h3>
+  <div class="activity-box">
+    <div class="banner">ACTIVITY 14.1 — FOUR WORKED EXAMPLES</div>
+    <p><strong>Example 1 — Sipho (17):</strong> Uses a forged ID to make Mr Molefe believe he is 18. Mr Molefe delivers a car; Sipho refuses to pay.</p>
+    <div class="feedback-box">
+      <div class="fb-label">▌ ANSWER</div>
+      <p><strong>Sipho IS delictually liable.</strong> He made a misrepresentation (forged ID); Mr Molefe was induced to contract; Mr Molefe suffered a loss. No indication Mr Molefe had reason to doubt. All three requirements satisfied.</p>
+    </div>
+    <p style="margin-top:0.8rem;"><strong>Example 2 — Justice (17):</strong> Claims to be 18 but it is obvious to Mrs Moloi that he cannot be older than 17.</p>
+    <div class="feedback-box">
+      <div class="fb-label">▌ ANSWER</div>
+      <p><strong>Justice is NOT delictually liable.</strong> Mrs Moloi was not induced — she was not misled. She had good cause to believe she was dealing with a minor and was not entitled merely to accept his statement.</p>
+    </div>
+    <p style="margin-top:0.8rem;"><strong>Example 3 — Minnie (17):</strong> Does not expressly claim to be 18, but knows Mr Ismail thinks she is in her early twenties and says nothing to correct him.</p>
+    <div class="feedback-box">
+      <div class="fb-label">▌ ANSWER</div>
+      <p><strong>Minnie IS delictually liable.</strong> By remaining silent when she knew of his false impression, she made a misrepresentation by conduct. Mr Ismail was induced; he suffered loss.</p>
+    </div>
+    <p style="margin-top:0.8rem;"><strong>Example 4 — Maria (17):</strong> Contracts with Mr Baloyi, a neighbour who has known her since before she was born.</p>
+    <div class="feedback-box">
+      <div class="fb-label">▌ ANSWER</div>
+      <p><strong>Maria is NOT delictually liable.</strong> Mr Baloyi knew she was a minor. He was not induced by any misrepresentation — he had full knowledge of her age.</p>
+    </div>
+  </div>
+ 
+  <div class="exam-alert">
+    <div class="banner">EXAM FRAMEWORK — MISREPRESENTATION PROBLEM QUESTIONS</div>
+    <p>Use this checklist in sequence:</p>
+    <ol style="margin-top:0.4rem;">
+      <li>Was there a <strong>misrepresentation</strong> (active claim, false impression by conduct, or silence creating a false impression)?</li>
+      <li>Was the other party actually <strong>misled/induced</strong>? (If they knew the minor's age, no — requirement 2 fails.)</li>
+      <li>Did the other party <strong>suffer damage</strong>?</li>
+      <li>Was the minor old enough to be <strong>reasonably mistaken</strong> for an adult? (A 10-year-old cannot be.)</li>
+    </ol>
+    <p style="margin-top:0.5rem;">Only if all four points are satisfied: the minor is <em>delictually liable</em>. The adult has a damages claim. The contract remains unenforceable.</p>
+  </div>
+</section>
+ 
+<hr class="unit-divider">
+ 
+<!-- ═══════════════════════════════════════════════════════ UNIT 15 -->
+<section class="unit" id="u15">
+  <div class="unit-tag">LEARNING UNIT 15</div>
+  <h2 class="unit-title">The Minor's Contractual Capacity — Unjustified Enrichment</h2>
+ 
+  <p>Even without a valid contract, and even without misrepresentation, an adult who has already performed in terms of an unassisted contract has one more potential remedy: a claim based on <strong>unjustified enrichment</strong>.</p>
+ 
+  <h3>15.1 What is Unjustified Enrichment?</h3>
+  <div class="concept-box">
+    <div class="banner">DEFINITION</div>
+    <p>A person (A) is <strong>unjustifiedly enriched</strong> at the expense of another (B) when:</p>
+    <ul>
+      <li>A gains a <em>patrimonial benefit</em> (estate value increases), AND</li>
+      <li>at B's <em>expense</em> (B's estate decreases), AND</li>
+      <li>there is <em>no recognised legal ground</em> justifying the transfer.</li>
+    </ul>
+    <p>The law then obliges A to repay B the amount by which A's estate has been and <em>remains</em> enlarged.</p>
+  </div>
+ 
+  <p>In the minor context: adult (B) performs in terms of an unassisted contract; minor (A) receives the benefit but refuses to pay. The minor is enriched at the adult's expense with no legal justification (since the contract is invalid). B can sue A for unjustified enrichment.</p>
+ 
+  <div class="case">
+    <div class="banner">§ CASE — KEY AUTHORITY</div>
+    <p class="case h5">Edelstein v Edelstein 1952 (3) SA 1 (A)</p>
+    <div class="case-row">
+      <span class="case-row">Held</span><span>Confirmed that the contract of a minor acting without assistance can <strong>never be valid</strong>, even if it is to the minor's benefit. BUT: the minor is still liable if <em>unjustifiedly enriched</em>.</span>
+      <span class="case-row">Importance</span><span>Capacity to act is not a requirement for liability based on enrichment. The policy reason is fairness — one should not profit at another's expense without justification.</span>
+    </div>
+  </div>
+ 
+  <h3>15.2 How is Enrichment Calculated?</h3>
+  <p>This is a <strong>critical calculation section</strong> — problem-type questions will require you to apply these three rules:</p>
+ 
+  <div class="calc-box">
+    <div class="banner">🔢 ENRICHMENT CALCULATION — THREE RULES</div>
+ 
+    <div class="calc-rule"><strong>Rule 1 — WHEN?</strong><br>The enrichment is calculated at the moment the <em>other party institutes the claim</em> (not the date of contracting).</div>
+ 
+    <div class="calc-rule"><strong>Rule 2 — HOW MUCH?</strong><br>Calculate two amounts: (a) how much the minor's estate increased (actual value of what the minor received), and (b) how much the other party's estate decreased (actual value they parted with). The <em>contract price is ignored</em>. The minor is liable for the <strong>lesser</strong> of the two amounts.</div>
+ 
+    <div class="calc-rule"><strong>Rule 3 — CHANGED CIRCUMSTANCES</strong>
+      <ul style="margin-top:0.4rem;">
+        <li>Asset <strong>lost or stolen</strong> → other party gets <em>nothing</em>.</li>
+        <li>Asset <strong>sold, proceeds spent on luxuries</strong> → minor liable only for what <em>remains</em> of the proceeds.</li>
+        <li>Asset <strong>sold, proceeds used on necessaries</strong> (food, clothing, accommodation, medical treatment) → minor liable for the <em>cost of the necessaries</em>, even if nothing remains. (Reason: the minor would have had to pay for these anyway — the enrichment equals the necessaries cost.)</li>
+        <li>Asset <strong>damaged</strong> → minor liable for the <em>current reduced value</em> at the date the claim is brought.</li>
+      </ul>
+    </div>
+  </div>
+ 
+  <div class="activity-box">
+    <div class="banner">ACTIVITY 15 — WORKED CALCULATION</div>
+    <p>Peter (16) buys a motorbike for R2 000 from Dan (adult), unassisted. At contracting, the bike is worth R1 500. Dan delivers. Peter refuses to pay. On 3 March Peter sells the bike for R1 000 — spends R500 on food/clothes (necessaries) and R500 on a holiday (luxury). On 20 March Dan sues.</p>
+    <div class="feedback-box">
+      <div class="fb-label">▌ ANSWER</div>
+      <p><strong>(a) Amount Peter is liable for (claim on 20 March, after selling):</strong><br>
+      Proceeds: R1 000. R500 spent on necessaries → counts as enrichment (R500). R500 on holiday → luxury, nothing remains → R0. Total enrichment = R500. Dan's estate decreased by R1 500 (actual value). Lesser = <strong>R500</strong>.</p>
+      <p style="margin-top:0.5rem;"><strong>(b) If Peter sold on 30 March (after claim instituted on 20 March):</strong><br>
+      At 20 March the bike was still in Peter's possession, worth R1 500 (original value if undamaged and still held). Peter's enrichment = R1 500. Dan's loss = R1 500. Lesser = <strong>R1 500</strong>.</p>
+      <p style="margin-top:0.5rem;"><strong>(c) If bike damaged, worth R800 on claim date:</strong><br>
+      Enrichment = R800 (current value). Dan's loss = R1 500. Lesser = <strong>R800</strong>.</p>
+      <p style="margin-top:0.5rem;"><strong>(d) If bike stolen before claim:</strong><br>
+      Asset lost → <strong>R0</strong>. Dan gets nothing.</p>
+    </div>
+  </div>
+ 
+  <table>
+    <thead><tr><th>Situation</th><th>Minor's Liability</th></tr></thead>
+    <tbody>
+      <tr><td>Asset still held (no change)</td><td>Lesser of actual value at claim date or other party's loss</td></tr>
+      <tr><td>Asset lost/stolen</td><td>Nothing</td></tr>
+      <tr><td>Asset sold — proceeds spent on luxuries (nothing remains)</td><td>Nothing</td></tr>
+      <tr><td>Asset sold — proceeds spent on necessaries</td><td>Cost of necessaries</td></tr>
+      <tr><td>Asset sold — proceeds partially remain</td><td>What remains of proceeds</td></tr>
+      <tr><td>Asset damaged</td><td>Current (reduced) value</td></tr>
+    </tbody>
+  </table>
+ 
+  <div class="deep-dive">
+    <div class="banner">DEEP DIVE — CONTRACT vs. ENRICHMENT LIABILITY</div>
+    <p>This distinction is <em>huge</em> in problem questions. If the minor is <strong>contractually liable</strong> (e.g. after ratification), they owe the <em>contract price</em> regardless of when the claim is brought. Under <strong>unjustified enrichment</strong>, the minor only owes the <em>current value of remaining enrichment</em> — which can be far less. A motorbike worth R50 000 at contracting might be worth only R20 000 when the claim is brought — that is all the minor pays under enrichment.</p>
+  </div>
+</section>
+ 
+<hr class="unit-divider">
+ 
+<!-- ═══════════════════════════════════════════════════════ UNIT 16 -->
+<section class="unit" id="u16">
+  <div class="unit-tag">LEARNING UNIT 16</div>
+  <h2 class="unit-title">The Minor's Contractual Capacity — Restitutio in Integrum</h2>
+ 
+  <p><strong>Critical distinction from Units 14 &amp; 15:</strong> Those units dealt with an <em>invalid</em> contract (no guardian assistance). Restitutio in integrum only applies where the contract is <em>valid</em>.</p>
+ 
+  <h3>16.1 What is Restitutio in Integrum?</h3>
+  <div class="concept-box">
+    <div class="banner">⚖ DEFINITION</div>
+    <p>An <strong>extraordinary legal remedy</strong> that allows a minor to escape contractual liability even under a <em>valid</em> contract. Both parties are placed in the position they would have been in <em>if the contract had never been entered into</em>. All performances are reversed.</p>
+  </div>
+ 
+  <h3>16.2 Two Requirements</h3>
+  <ol>
+    <li><strong>Valid contract</strong> — the minor must have contracted with the guardian's assistance, or the guardian must have ratified the contract, or the court must have given consent. (Restitutio is also available even if the court consented — because the court might have erred or been misled.)</li>
+    <li><strong>Prejudice to the minor</strong> — the contract must be to the minor's disadvantage, or the minor must suffer some prejudice as a result.</li>
+  </ol>
+ 
+  <div class="flow">
+    <div class="flow-step"><div class="flow-node">Is there a valid contract? (assisted, ratified, or court-approved)</div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-branch">
+      <div class="flow-yes"><span class="flow-label">YES →</span> Is the contract prejudicial to the minor?</div>
+      <div class="flow-no"><span class="flow-label">NO →</span> Restitutio does NOT apply. Look at: unjustified enrichment (Unit 15) or misrepresentation (Unit 14)</div>
+    </div>
+    <div class="flow-arrow" style="margin-top:0.4rem;">↓ (if YES to both)</div>
+    <div class="flow-branch">
+      <div class="flow-yes"><span class="flow-label">RESTITUTIO GRANTED →</span> Both parties restored to original position. All performances reversed.</div>
+      <div class="flow-no"><span class="flow-label">NOT GRANTED IF →</span> Minor misrepresented their capacity (fraudulent minor denied restitutio)</div>
+    </div>
+  </div>
+ 
+  <h3>16.3 Effect of Restitutio</h3>
+  <p>When granted, restitutio operates retroactively — the contract is treated as if it never existed. Each party must return what they received. This is a far-reaching remedy and courts will only grant it where the circumstances genuinely warrant it.</p>
+ 
+  <div class="activity-box">
+    <div class="banner">ACTIVITY 16.1 — WORKED EXAMPLE</div>
+    <p>Thomas (17, minor) sees a laptop advertised for R5 000. His guardian signs the contract on his behalf. Later, Thomas realises the laptop is actually only worth R2 000 on the market. Can he rely on restitutio?</p>
+    <div class="feedback-box">
+      <div class="fb-label">▌ ANSWER</div>
+      <p>There is a <strong>valid contract</strong> (guardian assistance). The contract is <strong>prejudicial</strong> to Thomas (he is overpaying by R3 000). Both requirements are satisfied — Thomas may apply for restitutio in integrum. If granted, both parties are restored: Thomas returns the laptop, the other party returns the R5 000 (or the deposit paid).</p>
+    </div>
+  </div>
+ 
+  <table>
+    <thead><tr><th>Feature</th><th>Unjustified Enrichment (Unit 15)</th><th>Restitutio in Integrum (Unit 16)</th></tr></thead>
+    <tbody>
+      <tr><td>Type of contract</td><td>INVALID (unassisted)</td><td>VALID (assisted/ratified)</td></tr>
+      <tr><td>Who benefits?</td><td>The adult (claiming from minor)</td><td>The minor (escaping valid contract)</td></tr>
+      <tr><td>Amount</td><td>Current enrichment value only</td><td>Full reversal — all performances returned</td></tr>
+      <tr><td>Fraudulent minor?</td><td>Cannot sue for enrichment if they misrepresented</td><td>Denied restitutio if they misrepresented</td></tr>
+    </tbody>
+  </table>
+</section>
+ 
+<hr class="unit-divider">
+ 
+<!-- ═══════════════════════════════════════════════════════ UNIT 17 -->
+<section class="unit" id="u17">
+  <div class="unit-tag">LEARNING UNIT 17</div>
+  <h2 class="unit-title">The Minor's Capacity in Respect of Other Juristic Acts, Litigation &amp; Delictual and Criminal Liability</h2>
+ 
+  <p>This unit moves beyond contracts to look at the minor's capacity across all other areas of legal life.</p>
+ 
+  <h3>17.1 Other Agreements</h3>
+  <p>The same rules for contractual capacity apply to other agreements:</p>
+  <ul>
+    <li>A minor <strong>can</strong> enter into an agreement that <em>only confers rights</em> on the minor (unilateral benefit) without guardian assistance.</li>
+    <li>A minor <strong>cannot</strong> enter into an agreement that <em>extinguishes the minor's debt</em> (releases another from what they owe the minor) without guardian assistance — this diminishes the minor's estate.</li>
+    <li>A minor <strong>cannot</strong> independently enter into a <em>real agreement</em> (which transfers ownership of property) — the same capacity rules apply.</li>
+  </ul>
+ 
+  <h3>17.2 Wills</h3>
+  <ul>
+    <li>A minor <strong>under 16</strong> cannot make a will.</li>
+    <li>A minor <strong>16 or older</strong> may make a valid will independently.</li>
+    <li>A minor may <strong>witness a will</strong> only if 14 years or older.</li>
+  </ul>
+ 
+  <h3>17.3 Marriage and Civil Unions</h3>
+  <p>Minors generally require parental/guardian consent to marry. In certain cases, additional consent is needed from the Minister of Home Affairs or the Commissioner of Child Welfare (or the High Court). Important principles:</p>
+  <ul>
+    <li>A <strong>void marriage</strong> does not terminate minority.</li>
+    <li>An <strong>annulled voidable marriage</strong> restores the minor's limited capacity with retroactive effect.</li>
+    <li><strong>Civil unions</strong> under the Civil Union Act are restricted to persons already 18 — a minor cannot acquire majority by entering a civil union.</li>
+  </ul>
+ 
+  <h3>17.4 Medical Treatment and Operations</h3>
+  <p>Section 129 of the Children's Act 38 of 2005 contains detailed rules:</p>
+  <table>
+    <thead><tr><th>Age</th><th>Medical Treatment</th><th>Surgical Operation</th></tr></thead>
+    <tbody>
+      <tr><td>Under 12</td><td>Parent/guardian consent required</td><td>Parent/guardian consent required</td></tr>
+      <tr><td>12+ (sufficient maturity)</td><td>May consent <em>independently</em></td><td>May consent, but must be <em>assisted</em> by parent/guardian (consent not needed, only assistance)</td></tr>
+      <tr><td>12+ but insufficient maturity</td><td>Parent/guardian consent required</td><td>Parent/guardian consent required</td></tr>
+    </tbody>
+  </table>
+ 
+  <h3>17.5 Holding Offices and Performing Functions</h3>
+  <p>A minor generally cannot hold public offices or perform certain official functions. The limitations exist because such positions carry responsibilities that require full legal capacity. Heaton sets out specific limitations.</p>
+ 
+  <h3>17.6 Capacity to Litigate</h3>
+  <div class="concept-box">
+    <div class="banner">GENERAL RULE</div>
+    <p>A minor generally <strong>cannot litigate without the assistance of his or her guardian</strong>. The guardian must assist in all civil proceedings involving the minor.</p>
+    <p style="margin-top:0.6rem;"><strong>Exception — Venia Agendi:</strong> The High Court (as upper guardian of all minors) may grant a minor <em>venia agendi</em> — permission to conduct a suit independently, without guardian assistance. This is granted only if the minor has reached a <em>relatively advanced level of intellectual development</em>.</p>
+    <p style="margin-top:0.5rem;"><strong>Criminal proceedings:</strong> A minor may be charged criminally without guardian assistance, but the parent/guardian must be <em>present at proceedings</em> if the child is under 18.</p>
+  </div>
+ 
+  <h3>17.7 Delictual and Criminal Liability — Accountability</h3>
+  <div class="concept-box">
+    <div class="banner">⚖ KEY DISTINCTION: Capacity to Act vs. Accountability</div>
+    <p><strong>Capacity to act</strong> = the ability to perform valid juristic acts (requires understanding nature, extent and consequences of acts).</p>
+    <p><strong>Accountability</strong> = the capacity to <em>distinguish between right and wrong</em> and to act accordingly. This is required for both delictual and criminal liability.</p>
+    <p><em>A minor may be accountable even though lacking capacity to act — they are different legal concepts.</em></p>
+  </div>
+ 
+  <table>
+    <thead><tr><th>Age Group</th><th>Delictual Liability</th><th>Criminal Liability (Child Justice Act 75/2008)</th></tr></thead>
+    <tbody>
+      <tr><td>Infans (0–6)</td><td>None (no accountability)</td><td>None (under 10 — no criminal capacity)</td></tr>
+      <tr><td>7–9</td><td>Depends on individual development</td><td>None (under 10 — no criminal capacity)</td></tr>
+      <tr><td>10–13</td><td>Depends on development</td><td>Rebuttable presumption of no criminal capacity</td></tr>
+      <tr><td>14–17</td><td>Fully accountable if can distinguish right/wrong</td><td>Full criminal capacity</td></tr>
+    </tbody>
+  </table>
+ 
+  <div class="exam-alert">
+    <div class="banner">★ EXAM CRITICAL — Accountability Requirements</div>
+    <p>For a minor to be accountable for a delict, the minor must have the mental faculties to: (1) differentiate between right and wrong, and (2) act in accordance with that understanding. Whether a specific minor had these faculties is a question of fact.</p>
+  </div>
+</section>
+ 
+<hr class="unit-divider">
+ 
+<!-- ═══════════════════════════════════════════════════════ UNIT 18 -->
+<section class="unit" id="u18">
+  <div class="unit-tag">LEARNING UNIT 18</div>
+  <h2 class="unit-title">Termination of Minority — Attainment of the Prescribed Age, Marriage, Venia Aetatis &amp; Release from Tutelage</h2>
+ 
+  <p>Minority ends when one of the prescribed events occurs. This unit deals with three of those events.</p>
+ 
+  <h3>18.1 Attainment of the Prescribed Age</h3>
+  <div class="concept-box">
+    <div class="banner">⚖ KEY LAW</div>
+    <p>The <strong>Children's Act 38 of 2005</strong> lowered the age of majority from 21 (under the former Age of Majority Act 57 of 1972) to <strong>18 years</strong> for all children in South Africa, with effect from <strong>1 July 2007</strong>.</p>
+    <p>Majority ensues at the <em>beginning of the day</em> of the person's 18th birthday.</p>
+    <p><strong>Important:</strong> The Children's Act does <em>not</em> have retroactive effect.</p>
+  </div>
+ 
+  <div class="case">
+    <div class="banner">§ CASE</div>
+    <p class="case h5">Malcolm v Premier, Western Cape Government NO 2014 (3) SA 177 (SCA)</p>
+    <div class="case-row">
+      <span class="case-row">Facts</span><span>Malcolm was born in June 1987. He contracted Hepatitis B at age 6 in 1993. The question was when prescription of his claim ran from.</span>
+      <span class="case-row">Issue</span><span>Did the lowering of the age of majority by the Children's Act affect prescriptions that were running before 1 July 2007?</span>
+      <span class="case-row">Held</span><span>No. The Children's Act has no retroactive effect. Malcolm's prescription ran from one year after he turned <strong>21</strong> (not 18), since the Children's Act was not yet in operation when he was born.</span>
+      <span class="case-row">Key Distinction</span><span>If Malcolm had been born in June 2008 (after the Act came into operation), prescription would run from one year after he turned 18.</span>
+    </div>
+  </div>
+ 
+  <h4>Customary Law</h4>
+  <p>In customary law there is <strong>no fixed age</strong> at which majority is attained. Majority depends on custom and tradition within the specific customary community.</p>
+ 
+  <h4>Prescription and Minors</h4>
+  <p>Normally, prescription of claims runs three years from when the claim arose. For minors, prescription is <em>postponed until one year after the minor becomes a major</em>. This is a crucial protective rule.</p>
+ 
+  <h3>18.2 Marriage or Civil Union</h3>
+  <ul>
+    <li>A person who enters into a <strong>valid civil or customary marriage</strong> before turning 18 becomes a major for <em>all purposes</em>.</li>
+    <li>If the marriage is dissolved by <strong>death or divorce</strong> before 18, <em>minority does not revive</em>.</li>
+    <li>A <strong>void marriage</strong> does not terminate minority.</li>
+    <li>Annulment of a <strong>voidable marriage</strong> restores the minor's limited capacity with retroactive effect.</li>
+    <li>A <strong>civil union</strong> under the Civil Union Act is restricted to persons already 18 — a minor cannot acquire majority this way.</li>
+  </ul>
+ 
+  <div class="activity-box">
+    <div class="banner">ACTIVITY 18 — MARRIAGE SCENARIOS</div>
+    <p>Nomsa (17) marries Sipho in a valid customary marriage. Six months later Sipho dies. Is Nomsa a major or a minor?</p>
+    <div class="feedback-box">
+      <div class="fb-label">▌ ANSWER</div>
+      <p>Nomsa became a major upon the valid customary marriage. When Sipho died, her minority did <strong>not revive</strong> — once terminated by a valid marriage, minority is permanently ended regardless of the marriage's subsequent dissolution.</p>
+    </div>
+  </div>
+ 
+  <h3>18.3 Venia Aetatis and Release from Tutelage</h3>
+  <div class="concept-box">
+    <div class="banner">⚖ DISTINCTION</div>
+    <table style="margin-top:0.5rem;">
+      <thead><tr><th>Concept</th><th>Who Granted It</th><th>Effect</th><th>Current Status</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Venia Aetatis</strong></td><td>The executive/sovereign (State President by proclamation)</td><td>Minor treated as major in law, except cannot alienate immovable property or mortgage it (unless expressly conferred)</td><td>Heaton submits this can <strong>no longer be granted</strong> — administrative machinery no longer exists</td></tr>
+        <tr><td><strong>Release from Tutelage</strong></td><td>The judiciary (Cape courts historically)</td><td>Same practical effect as venia aetatis — court releases minor from parental responsibilities and rights</td><td>Still potentially possible — High Court as upper guardian may still grant this. May be replaced by s 28 of the Children's Act</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+ 
+<hr class="unit-divider">
+ 
+<!-- ═══════════════════════════════════════════════════════ UNIT 19 -->
+<section class="unit" id="u19">
+  <div class="unit-tag">LEARNING UNIT 19</div>
+  <h2 class="unit-title">Termination of Minority — Emancipation</h2>
+ 
+  <p>Emancipation is the freedom to enter into contracts <em>independently</em>, granted to a minor by a parent or guardian. This does <em>not</em> make the minor a major in all respects — it is a more limited concept.</p>
+ 
+  <h3>19.1 What is Emancipation?</h3>
+  <div class="concept-box">
+    <div class="banner">⚖ DEFINITION</div>
+    <p>Emancipation occurs where a <strong>guardian grants a minor the freedom to enter into contracts independently</strong>. The minor acts without needing guardian assistance for those contracts.</p>
+    <p>It does <em>not</em> extend to alienating or encumbering immovable property, or to contracting marriage.</p>
+  </div>
+ 
+  <h3>19.2 Forms of Emancipation</h3>
+ 
+  <h4>Express (Historical) Emancipation</h4>
+  <p>Originally a declaration before the court by the parent/guardian that they had emancipated their child from parental authority. This was later replaced by venia aetatis and is no longer used in this form.</p>
+ 
+  <h4>Implied (Tacit) Emancipation</h4>
+  <p>This is the modern and relevant form. Implied emancipation occurs when a minor <strong>lives apart from their parents and manages their own undertaking</strong>. It can itself be express or tacit — the question is always one of fact.</p>
+ 
+  <h3>19.3 Factors Courts Consider</h3>
+  <p>Whether emancipation has occurred is a <strong>question of fact</strong>. Courts look at:</p>
+  <ul>
+    <li>Whether the minor lives on their own and manages their own business.</li>
+    <li>The minor's age.</li>
+    <li>The relationship between the minor and the guardian.</li>
+    <li>The nature of the minor's occupation.</li>
+    <li>The length of time the occupation has been carried on.</li>
+  </ul>
+ 
+  <h3>19.4 Extent of Emancipation</h3>
+  <p>The extent of emancipation is also a question of fact:</p>
+  <ul>
+    <li><strong>General emancipation</strong> — covers all contracts (not just those related to the minor's trade). Must be clearly proved. Excludes: alienation/encumbrance of immovable property and marriage.</li>
+    <li><strong>Partial emancipation</strong> — limited to contracts connected with the minor's business or occupation. If the guardian has only emancipated a minor for their business, capacity is restricted to that scope.</li>
+  </ul>
+ 
+  <h3>19.5 Effect on Capacity</h3>
+  <table>
+    <thead><tr><th>Aspect</th><th>Effect of Emancipation</th></tr></thead>
+    <tbody>
+      <tr><td>Capacity to contract</td><td>Minor can contract independently within scope of emancipation</td></tr>
+      <tr><td>Restitutio in integrum</td><td>An emancipated minor <em>can still claim restitutio</em> if prejudiced by a contract within the scope of emancipation</td></tr>
+      <tr><td>Capacity to litigate</td><td>An emancipated minor <em>can litigate</em> in respect of matters within the scope of emancipation, without guardian assistance</td></tr>
+      <tr><td>Immovable property</td><td>Cannot be alienated or encumbered unless expressly authorised</td></tr>
+      <tr><td>Marriage</td><td>Emancipation does not authorise contracting marriage</td></tr>
+    </tbody>
+  </table>
+ 
+  <h3>19.6 Revocation of Emancipation</h3>
+  <p>A guardian may revoke emancipation, but only to the extent that third parties acting in good faith have not already relied on it. Revocation does not affect rights already acquired by third parties.</p>
+ 
+  <h3>19.7 Burden of Proof</h3>
+  <p>The <strong>onus of proving tacit emancipation</strong> rests on the person who <em>alleges</em> that emancipation took place.</p>
+ 
+  <div class="activity-box">
+    <div class="banner">✎ ACTIVITY 19 — WORKED EXAMPLE</div>
+    <p>Zanele (17) has been running her own hair salon for 18 months, lives in her own flat, and manages her own finances with her mother's full knowledge and approval. She signs a lease for new salon equipment worth R40 000 without consulting her mother. Can she be held liable?</p>
+    <div class="feedback-box">
+      <div class="fb-label">▌ ANSWER</div>
+      <p>This is a strong case for <em>implied emancipation</em>. The factors point strongly toward emancipation: she lives independently, runs her own business, manages her own affairs, and her guardian knows and approves. The lease relates to her business — so even if only partially emancipated for business matters, this falls within scope. She is very likely to be held <strong>liable on the contract</strong> as an emancipated minor. The onus of proving emancipation lies on whoever asserts it (the lessor, here).</p>
+    </div>
+  </div>
+</section>
+ 
+<hr class="unit-divider">
+ 
+<!-- ═══════════════════════════════════════════════════════ UNIT 20 -->
+<section class="unit" id="u20">
+  <div class="unit-tag">LEARNING UNIT 20</div>
+  <h2 class="unit-title">Diverse Factors Which Affect Status</h2>
+ 
+  <p>This final unit examines how various conditions beyond age can affect a person's status — specifically their legal capacity, capacity to act, capacity to litigate, and accountability.</p>
+ 
+  <h3>20.1 Status — Quick Recap</h3>
+  <div class="status-grid">
+    <div class="status-card"><strong>Legal Capacity</strong>Being a legal subject — holding rights and duties. All persons have this.</div>
+    <div class="status-card"><strong>Capacity to Act</strong>Ability to perform valid juristic acts. Can be limited or absent.</div>
+    <div class="status-card"><strong>Capacity to Litigate</strong><em>Locus standi in iudicio</em> — ability to appear in court as a party.</div>
+    <div class="status-card"><strong>Accountability</strong>Capacity to be held responsible for crimes and delicts.</div>
+  </div>
+ 
+  <h3>20.2 Mental Illness</h3>
+ 
+  <h4>Definition (Lange v Lange 1945 AD 332)</h4>
+  <div class="case">
+    <div class="banner">§ CASE — DEFINITION OF MENTAL ILLNESS</div>
+    <p class="case h5">Lange v Lange 1945 AD 332</p>
+    <div class="case-row">
+      <span class="case-row">Held</span><span>A person is mentally ill for purposes of private law if either: (1) they cannot understand the nature and consequences of the transaction they are entering into, OR (2) they do understand, but are motivated or influenced by <em>delusions caused by mental illness</em>.</span>
+      <span class="case-row">Proof</span><span>Mental illness is a question of fact, usually proved through medical/psychiatric evidence. The court is not bound by expert opinions but will not lightly reject them.</span>
+    </div>
+  </div>
+ 
+  <h4>Legal Status of a Mentally Ill Person</h4>
+  <div class="concept-box">
+    <div class="banner">⚖ EFFECTS</div>
+    <ul>
+      <li><strong>Capacity to act:</strong> None. All juristic acts are <em>void</em> (not voidable) — the law attaches no consequences to the will of a mentally ill person.</li>
+      <li><strong>Capacity to litigate:</strong> None — cannot appear as a party in their own right.</li>
+      <li><strong>Lucidum Intervallum (lucid interval):</strong> If the person performs a juristic act during a genuine lucid interval, the act is <em>valid</em>. The critical moment is when the act is performed.</li>
+      <li><strong>Certification does NOT determine capacity:</strong> A certified person who is lucid at the moment of acting has capacity; an uncertified person who is mentally ill at the moment has no capacity. The factual state at the specific moment governs.</li>
+    </ul>
+  </div>
+ 
+  <h4>Curators for Mentally Ill Persons</h4>
+  <table>
+    <thead><tr><th>Curator Type</th><th>Function</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Curator Bonis</strong></td><td>Administers the mentally ill person's <em>property/estate</em>. Appointment does not automatically deprive the person of all capacity to act — a lucid person can still act validly.</td></tr>
+      <tr><td><strong>Curator Personae</strong></td><td>Looks after the mentally ill person's <em>personal and health affairs</em> where they cannot manage these.</td></tr>
+      <tr><td><strong>Curator ad Litem</strong></td><td>Assists the mentally ill person in <em>litigation</em>.</td></tr>
+    </tbody>
+  </table>
+ 
+  <h4>Mental Health Care Act 17 of 2002</h4>
+  <p>Governs the care, treatment, rehabilitation and property administration of persons with mental illness. Know that the Act provides for the care and administration of property under section 7.6.6 (Heaton). The common-law principles (above) govern legal status.</p>
+ 
+  <h3>20.3 Inability to Manage One's Own Affairs</h3>
+  <div class="concept-box">
+    <div class="banner">⚖ KEY POINTS</div>
+    <p>The court may appoint a <strong>curator bonis</strong> for any person who, because of a physical or mental disability or incapacity (not necessarily mental illness), cannot manage their own affairs. Examples: deaf-mute, blind, senile, paralysed, seriously ill.</p>
+    <p>Crucially: appointment of a curator does <strong>not</strong> result in total loss of capacity to act. Each situation must be assessed at the specific moment of the juristic act. If the person was capable of managing their affairs at that moment, the act is valid.</p>
+  </div>
+ 
+  <h3>20.4 Influence of Alcohol and Drugs</h3>
+  <div class="concept-box">
+    <div class="banner">⚖ KEY PRINCIPLES</div>
+    <ul>
+      <li>"Intoxication" covers the effect of <em>any drug</em>, not only alcohol.</li>
+      <li>The test is high: the person must be so affected that they <strong>do not know what they are doing or the consequences of their acts</strong>. Mere increased willingness or persuadability is insufficient.</li>
+      <li>If this threshold is met: the juristic act is <strong>void</strong> (not voidable).</li>
+      <li>Effect is <strong>temporary</strong> — only lasts as long as the intoxication persists.</li>
+      <li>The person who alleges intoxication must <strong>prove</strong> it.</li>
+    </ul>
+  </div>
+ 
+  <h3>20.5 Prodigality</h3>
+ 
+  <h4>Definition</h4>
+  <div class="concept-box">
+    <div class="banner">⚖ DEFINITION</div>
+    <p>A <strong>prodigal</strong> is a person who has <em>normal mental ability</em> but cannot manage their own affairs because they squander their assets in an irresponsible and reckless way, due to some defect in their powers of judgement or character. A prodigal is thus different from a mentally ill person — their intellect is intact, but their financial judgement is fundamentally defective.</p>
+  </div>
+ 
+  <h4>Declaring a Prodigal — Interdiction</h4>
+  <p>A court declares a person a prodigal through an order called <strong>interdiction</strong>. After interdiction, the prodigal's status changes significantly.</p>
+ 
+  <div class="status-grid">
+    <div class="status-card"><strong>Legal Capacity</strong>Remains — a prodigal is still a legal subject with rights and duties.</div>
+    <div class="status-card"><strong>Capacity to Act</strong>Severely limited — the interdicted prodigal generally cannot incur obligations or alienate property independently.</div>
+    <div class="status-card"><strong>Capacity to Litigate</strong>Limited — generally cannot litigate independently; requires curator assistance.</div>
+    <div class="status-card"><strong>Accountability</strong>Not affected — a prodigal remains fully accountable for crimes and delicts.</div>
+  </div>
+ 
+  <p>A <strong>curator bonis</strong> is appointed to administer the prodigal's estate.</p>
+ 
+  <h4>Constitutional Implications</h4>
+  <p>Interdiction as a prodigal potentially infringes on constitutional rights (autonomy, dignity). The courts have had to grapple with whether such interdiction is constitutionally justifiable. The relevant discussion is in Heaton — know that there are constitutional concerns about the extent to which a prodigal's rights are curtailed.</p>
+ 
+  <h3>20.6 Insolvency</h3>
+ 
+  <h4>Definition</h4>
+  <p>An <strong>insolvent</strong> is a person whose liabilities exceed their assets, and whose estate has been <em>sequestrated</em> (formally declared insolvent) by the High Court.</p>
+ 
+  <div class="status-grid">
+    <div class="status-card"><strong>Legal Capacity</strong>Survives — the insolvent remains a legal subject. Certain rights are restricted by statute (e.g. cannot serve in certain offices).</div>
+    <div class="status-card"><strong>Capacity to Act</strong>Partially limited — may still conclude certain contracts independently; others require trustee consent. Contracts in breach are voidable by the trustee.</div>
+    <div class="status-card"><strong>Capacity to Litigate</strong>Partially suspended — civil proceedings stayed until trustee appointed. After trustee appointment, the insolvent retains capacity to litigate in personal matters.</div>
+    <div class="status-card"><strong>Accountability</strong>Fully retained — insolvency does not affect accountability for crimes or delicts.</div>
+  </div>
+ 
+  <h4>What Happens to the Estate?</h4>
+  <ul>
+    <li>Upon sequestration, the estate <em>vests in the Master of the High Court</em> until a trustee is appointed.</li>
+    <li>Once the trustee is appointed, the <em>insolvent estate vests in the trustee</em>.</li>
+    <li>The insolvent can still acquire assets after sequestration — these are generally protected from creditors who were owed money before sequestration.</li>
+    <li>If the insolvent commits a delict after sequestration, compensation is paid from <em>post-sequestration assets</em>.</li>
+  </ul>
+ 
+  <h4>Contracts After Sequestration</h4>
+  <p>The insolvent may still conclude certain contracts independently (relating to personal matters and post-sequestration property). Contracts affecting the insolvent estate typically require the trustee's consent. If concluded in breach of this requirement, they are voidable at the trustee's election.</p>
+ 
+  <div class="deep-dive">
+    <div class="banner">DEEP DIVE — COMPARING ALL FIVE STATUS FACTORS</div>
+    <table>
+      <thead><tr><th>Factor</th><th>Capacity to Act</th><th>Capacity to Litigate</th><th>Accountability</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Mental Illness</strong></td><td>None (unless lucid interval)</td><td>None</td><td>None (no accountability during illness)</td></tr>
+        <tr><td><strong>Physical Incapacity (curator)</strong></td><td>Partial (depends on specific moment)</td><td>Assisted by curator</td><td>Retained if capable of fault</td></tr>
+        <tr><td><strong>Intoxication</strong></td><td>None (while intoxicated)</td><td>Effectively none while intoxicated</td><td>Reduced/absent while intoxicated</td></tr>
+        <tr><td><strong>Prodigality</strong></td><td>Severely limited after interdiction</td><td>Limited</td><td>Fully retained</td></tr>
+        <tr><td><strong>Insolvency</strong></td><td>Partially limited</td><td>Suspended then retained</td><td>Fully retained</td></tr>
+      </tbody>
+    </table>
+  </div>
+ 
+  <div class="exam-alert">
+    <div class="banner">★ EXAM CRITICAL — Unit 20 Distinctions</div>
+    <ul>
+      <li>Confusing mental illness (no capacity; void acts) with prodigality (limited capacity; specific rules apply).</li>
+      <li>Thinking certification = no capacity. Wrong — the factual state at the moment of the act governs.</li>
+      <li>Thinking insolvency removes all capacity to litigate. Wrong — only certain civil proceedings are stayed pending trustee appointment.</li>
+      <li>Forgetting that prodigals and insolvents retain full accountability for crimes and delicts.</li>
+    </ul>
+  </div>
+</section>
+ 
+<hr class="unit-divider">
+
+  <!-- ═══════════════════════════════════════════════════════ FINAL SUMMARY -->
+<section style="background:var(--warm-mid); border:2px solid var(--rule); border-radius:10px; padding:1.5rem; margin-bottom:2rem;">
+  <h2 style="font-family:'Fraunces',serif; color:var(--accent); font-size:1.4rem; margin-bottom:1rem;">Master Summary — Remedies for Adult Contracting with Unassisted Minor</h2>
+  <p>When an adult has contracted with an unassisted minor (invalid contract) and already performed, they have up to three potential remedies:</p>
+  <table>
+    <thead><tr><th>Remedy</th><th>Trigger</th><th>What the Adult Gets</th><th>Unit</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Delictual Damages (Misrepresentation)</strong></td><td>Minor misrepresented their age/capacity AND adult was induced AND suffered loss</td><td>Damages to put adult in position they would have been in without the misrepresentation</td><td>14</td></tr>
+      <tr><td><strong>Unjustified Enrichment</strong></td><td>Minor was enriched at adult's expense without legal ground</td><td>Amount by which minor's estate was CURRENTLY enriched (lesser of two values)</td><td>15</td></tr>
+      <tr><td><strong>Restitutio in Integrum</strong></td><td>Contract is VALID (assisted) but prejudicial to the minor — minor seeks this remedy</td><td>Full reversal of performances (minor's remedy against valid contract)</td><td>16</td></tr>
+    </tbody>
+  </table>
+  <p style="margin-top:0.8rem;"><strong>Key rule:</strong> Restitutio is the <em>minor's</em> remedy. Misrepresentation and enrichment are the <em>adult's</em> remedies.</p>
+</section>
+
+<!-- ============================================================= -->
+<!-- REVIEW -->
+<!-- ============================================================= -->
+<section class="unit" id="review">
+  <div class="unit-label">Putting it all together</div>
+  <h2>The Big Picture</h2>
+
+  <p class="intro-para">The law of persons answers three questions in order: <em>who</em> is a person in law, <em>how long</em> are they a person, and <em>what kind</em> of person are they in law. Units 2–12 walk you through that arc.</p>
+
+  <div class="diagram">
+    <div class="flow">
+      <div class="flow-node accent" style="min-width: 280px;">PART 1 — Who is a legal subject? (Unit 2)</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node accent" style="min-width: 280px;">PART 2 — Beginning & End of Personality (Units 3–5)</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node accent" style="min-width: 280px;">PART 3 — Factors Affecting Status (Units 6–12+)</div>
+      <div class="flow-split">
+        <div class="flow-node">Domicile (U7)</div>
+        <div class="flow-node">Birth of unmarried parents (U8–9)</div>
+        <div class="flow-node">Youth (U10–12)</div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <h3>Key Statutes (know them by heart)</h3>
+  <ul>
+    <li>Births and Deaths Registration Act 51 of 1992</li>
+    <li>National Health Act 61 of 2003 (defines brain death)</li>
+    <li>Inquests Act 58 of 1959</li>
+    <li>Dissolution of Marriages on Presumption of Death Act 23 of 1979</li>
+    <li>Choice on Termination of Pregnancy Act 92 of 1996</li>
+    <li>Sterilisation Act 44 of 1998</li>
+    <li>Domicile Act 3 of 1992</li>
+    <li>Children's Act 38 of 2005 (esp. ss 18–23, 36, 37)</li>
+    <li>Child Justice Act 75 of 2008</li>
+    <li>Civil Union Act 17 of 2006</li>
+    <li>Reform of Customary Law of Succession Act 11 of 2009</li>
+  </ul>
+
+  <h3>Prescribed Cases (must know in detail)</h3>
+  <ol>
+    <li><a href="#case-mtati"><em>Road Accident Fund v Mtati</em></a> — prenatal injury = ordinary delict, not fiction</li>
+    <li><a href="#case-ym"><em>YM v LB</em></a> — court can order DNA tests on minors if in best interests</li>
+    <li><a href="#case-klvc"><em>KLVC v SDI</em></a> — "reasonable period" and "contribution" under s 21(1)(b)</li>
+  </ol>
+
+  <h3>Other Important Cases</h3>
+  <p>
+    <a href="#case-pinchin"><em>Pinchin v Santam</em></a> · 
+    <a href="#case-boedel"><em>Ex parte Boedel Steenkamp</em></a> · 
+    <a href="#case-chisholm"><em>Chisholm v East Rand Proprietary Mines</em></a> · 
+    <a href="#case-shields"><em>Shields v Shields</em></a> · 
+    <a href="#case-rall"><em>Christian League of SA v Rall</em></a> · 
+    <a href="#case-cla"><em>Christian Lawyers Association v Minister of Health</em></a> · 
+    <a href="#case-russell"><em>Ex parte Estate Russell</em></a> · 
+    <a href="#case-bhe"><em>Bhe v Magistrate, Khayelitsha</em></a> · 
+    <a href="#case-petersen"><em>Petersen v Maintenance Officer</em></a> · 
+    <a href="#case-fvl"><em>F v L</em></a> · 
+    <a href="#case-nefler"><em>Nefler v Nefler</em></a> · 
+    <a href="#case-tjollo"><em>Tjollo Ateljees v Small</em></a> · 
+    <a href="#case-friedman"><em>Friedman v Glicksman</em></a>
+  </p>
+
+  <h3>Answering Problem-Type Questions — The IRAC Method</h3>
+  <ol>
+    <li><strong>Issue</strong> — Identify the legal problem.</li>
+    <li><strong>Rule</strong> — State the applicable legal principles (with authority — statute, case, writer).</li>
+    <li><strong>Application</strong> — Apply the rules to the facts.</li>
+    <li><strong>Conclusion</strong> — Give your answer.</li>
+  </ol>
+
+  <div class="mnemonic">
+    <span class="tag">Exam Mantra</span>
+    "Issue. Rule. Authority. Application. Conclusion."
+  </div>
+
+  <h3>Summarising a Judgment — The Four Components</h3>
+  <ol>
+    <li>The <strong>facts</strong></li>
+    <li>The <strong>legal question</strong></li>
+    <li>The <strong>judgment</strong> (the court's answer)</li>
+    <li>The <strong>reasons</strong> for judgment (<em>rationes decidendi</em>)</li>
+  </ol>
+</section>
+
+<footer>
+  You've got this. Study with intention then rest.
+</footer>
+
+</div>
+</body>
+</html>
